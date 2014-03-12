@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Schemas/ConfigurableDomains.xsd" SystemClassName="FS">
+
+  <ConfigurableDomain Name="Genre" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Heavy-metal">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="Mood" MatchesWhen="Is" Value="mad"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Classical">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="Mood" MatchesWhen="Is" Value="glad"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Post-rock">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="Mood" MatchesWhen="Is" Value="sad"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+
+    <ConfigurableElements>
+      <ConfigurableElement Path="/FS/my_library/artists/IronMaiden"/>
+      <ConfigurableElement Path="/FS/my_library/artists/ExplosionsInTheSky"/>
+      <ConfigurableElement Path="/FS/my_library/artists/Beethoven"/>
+      <ConfigurableElement Path="/FS/my_library/artists/BlackSabbath"/>
+    </ConfigurableElements>
+
+    <Settings>
+      <Configuration Name="Heavy-metal">
+        <ConfigurableElement Path="/FS/my_library/artists/IronMaiden">
+          <StringParameter Name="IronMaiden">Included</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/BlackSabbath">
+          <StringParameter Name="BlackSabbath">Included</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/Beethoven">
+          <StringParameter Name="Beethoven">Excluded</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/ExplosionsInTheSky">
+          <StringParameter Name="ExplosionsInTheSky">Excluded</StringParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Classical">
+        <ConfigurableElement Path="/FS/my_library/artists/IronMaiden">
+          <StringParameter Name="IronMaiden">Excluded</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/Beethoven">
+          <StringParameter Name="Beethoven">Included</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/ExplosionsInTheSky">
+          <StringParameter Name="ExplosionsInTheSky">Excluded</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/BlackSabbath">
+          <StringParameter Name="BlackSabbath">Excluded</StringParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Post-rock">
+        <ConfigurableElement Path="/FS/my_library/artists/IronMaiden">
+          <StringParameter Name="IronMaiden">Excluded</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/Beethoven">
+          <StringParameter Name="Beethoven">Excluded</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/ExplosionsInTheSky">
+          <StringParameter Name="ExplosionsInTheSky">Included</StringParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/FS/my_library/artists/BlackSabbath">
+          <StringParameter Name="BlackSabbath">Excluded</StringParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+
+  </ConfigurableDomain>
+</ConfigurableDomains>

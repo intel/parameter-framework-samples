@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../Schemas/Subsystem.xsd"
+  Name="my_library" Type="FS" Endianness="Little">
+  <ComponentLibrary>
+
+    <ComponentType Name="Artists" Mapping="Directory:File">
+      <StringParameter Name="IronMaiden" Mapping="File:ironMaiden" MaxLength="32"/>
+      <StringParameter Name="ExplosionsInTheSky" Mapping="File:explosionInTheSky" MaxLength="32"/>
+      <StringParameter Name="Beethoven" Mapping="File:beethoven" MaxLength="32"/>
+      <StringParameter Name="BlackSabbath" Mapping="File:blackSabbath" MaxLength="32"/>
+    </ComponentType>
+
+  </ComponentLibrary>
+
+  <InstanceDefinition>
+    <Component Name="artists" Type="Artists" Mapping="Directory:/home/lab/MusicLibrary/libraries/myMusic"/>
+  </InstanceDefinition>
+</Subsystem>

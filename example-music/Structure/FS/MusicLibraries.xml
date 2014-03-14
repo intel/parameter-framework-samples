@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SystemClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Schemas/SystemClass.xsd" Name="FS">
-  <SubsystemInclude Path="my_music.xml"/>
-  <!-- could get multiple libraries here, for instance the mother's library -->
+    <SubsystemInclude Path="my_music.xml"/>
 </SystemClass>

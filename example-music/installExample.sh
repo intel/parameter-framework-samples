@@ -14,7 +14,7 @@ replacePaths()
 
     # music root directory
     cd Structure/FS
-    sed s@'Directory:/.*"'@Directory:${CURRENTDIR}\"@ my_music.xml > $tmpFile
+    sed s@'Directory:/.*"'@Directory:${CURRENTDIR}/libraries/myMusic\"@ my_music.xml > $tmpFile
     cat $tmpFile > my_music.xml
 }
 

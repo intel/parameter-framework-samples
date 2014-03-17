@@ -14,6 +14,6 @@
     </ComponentLibrary>
 
     <InstanceDefinition>
-        <Component Name="artists" Type="Artists" Mapping="Directory:/home/lab/parameter-framework-samples/example-music"/>
+        <Component Name="artists" Type="Artists" Mapping="Directory:/home/lab/parameter-framework-samples/example-music/libraries/myMusic"/>
     </InstanceDefinition>
 </Subsystem>

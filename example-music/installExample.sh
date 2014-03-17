@@ -13,7 +13,7 @@ replacePaths()
     cat $tmpFile > ParameterFrameworkConfiguration.xml
 
     # music root directory
-    cd Structure/FS
+    cd Structure/MusicLibrary
     sed s@'Directory:/.*"'@Directory:${CURRENTDIR}/libraries/myMusic\"@ my_music.xml > $tmpFile
     cat $tmpFile > my_music.xml
 }

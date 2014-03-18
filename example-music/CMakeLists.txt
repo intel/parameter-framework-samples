@@ -4,8 +4,8 @@ set(INSTALL_LOCATION_FOLDER ${CMAKE_INSTALL_PREFIX})
 message("plugin location = ${PLUGIN_LOCATION_FOLDER}")
 message("install location = ${INSTALL_LOCATION_FOLDER}")
 
-configure_file(ParameterFrameworkConfiguration.xml ${CMAKE_INSTALL_PREFIX}/example-music/ParameterFrameworkConfiguration.xml)
-configure_file(Structure/MusicLibrary/my_music.xml ${CMAKE_INSTALL_PREFIX}/example-music/Structure/MusicLibrary/my_music.xml)
+configure_file(ParameterFrameworkConfiguration.xml ${CMAKE_INSTALL_PREFIX}/ParameterFrameworkConfiguration.xml)
+configure_file(Structure/MusicLibrary/my_music.xml ${CMAKE_INSTALL_PREFIX}/Structure/MusicLibrary/my_music.xml)
 
 install(FILES
     Schemas/ComponentLibrary.xsd
@@ -17,15 +17,15 @@ install(FILES
     Schemas/Parameter.xsd
     Schemas/Subsystem.xsd
     Schemas/SystemClass.xsd
-    DESTINATION example-music/Schemas)
+    DESTINATION Schemas)
 
 install(FILES
     Settings/MusicLibrary/Genres.xml
-    DESTINATION example-music/Settings/MusicLibrary)
+    DESTINATION Settings/MusicLibrary)
 
 install(FILES
     Structure/MusicLibrary/MusicLibraries.xml
-    DESTINATION example-music/Structure/MusicLibrary)
+    DESTINATION Structure/MusicLibrary)
 
 install(FILES
     libraries/myMusic/beethoven

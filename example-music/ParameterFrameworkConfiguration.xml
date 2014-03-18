@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ParameterFrameworkConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schemas/ParameterFrameworkConfiguration.xsd"
+<ParameterFrameworkConfiguration
     SystemClassName="MusicLibrary" ServerPort="5000" TuningAllowed="true">
     <SubsystemPlugins>
-        <Location Folder="/home/lab/pfw_installed//lib">
+        <Location Folder="@PLUGIN_LOCATION_FOLDER@">
             <Plugin Name="libfs-subsystem.so"/>
         </Location>
     </SubsystemPlugins>

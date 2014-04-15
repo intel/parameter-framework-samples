@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentTypeSet xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../Schemas/ComponentTypeSet.xsd">
+
+    <!-- === Generic === -->
+    <ComponentType Name="PowerMode">
+        <EnumParameter Name="value" Size="8" Mapping="Control:%1 Power Mode">
+            <ValuePair Literal="low-power" Numerical="0"/>
+            <ValuePair Literal="high-performance" Numerical="1"/>
+        </EnumParameter>
+    </ComponentType>
+
+    <!-- === Outputs === -->
+
+    <!-- Outputs / Handsfree -->
+    <ComponentType Name="HandsfreeEnable">
+        <BooleanParameter Name="right"  Mapping="Control:%1 Right Playback"/>
+        <BooleanParameter Name="left"  Mapping="Control:%1 Left Playback"/>
+    </ComponentType>
+    <ComponentType Name="HandsfreeOutput">
+        <IntegerParameter Name="volume" ArrayLength="2" Size="8" Min="0" Max="30" Mapping="Control:%1 Playback Volume"/>
+        <Component Name="enable" Type="HandsfreeEnable"/>
+    </ComponentType>
+
+    <!-- Outputs / Headset -->
+    <ComponentType Name="HeadsetEnable">
+        <EnumParameter Name="right" Size="8" Mapping="Control:%1 Right Playback">
+            <ValuePair Literal="off" Numerical="0"/>
+            <ValuePair Literal="hs_dac" Numerical="1"/>
+            <ValuePair Literal="line-in_amp" Numerical="2"/>
+        </EnumParameter>
+        <EnumParameter Name="left" Size="8" Mapping="Control:%1 Left Playback">
+            <ValuePair Literal="off" Numerical="0"/>
+            <ValuePair Literal="hs_dac" Numerical="1"/>
+            <ValuePair Literal="line-in_amp" Numerical="2"/>
+        </EnumParameter>
+    </ComponentType>
+    <ComponentType Name="HeadsetOutput">
+        <IntegerParameter Name="volume" ArrayLength="2" Size="8" Min="0" Max="15" Mapping="Control:%1 Playback Volume"/>
+        <Component Name="enable" Type="HeadsetEnable"/>
+    </ComponentType>
+
+    <!-- Outputs / Earpiece -->
+    <ComponentType Name="EarpieceOutput">
+        <IntegerParameter Name="volume" Size="8" Min="0" Max="15" Mapping="Control:%2 Playback Volume"/>
+        <BooleanParameter Name="enable"  Mapping="Control:%2 Playback Switch"/>
+    </ComponentType>
+
+    <!-- Outputs / Aux -->
+    <ComponentType Name="AuxOutput">
+        <BooleanParameter Name="right"  Mapping="Control:%1 Playback Switch"/>
+        <BooleanParameter Name="left"  Mapping="Control:%2 Playback Switch"/>
+    </ComponentType>
+
+    <!-- Outputs / Vibra -->
+    <ComponentType Name="VibraOutput">
+        <EnumParameter Name="right" Size="8" Mapping="Control:%1 Right Playback">
+            <ValuePair Literal="input_ff" Numerical="0"/>
+            <ValuePair Literal="audio_pdm" Numerical="1"/>
+        </EnumParameter>
+        <EnumParameter Name="left" Size="8" Mapping="Control:%1 Left Playback">
+            <ValuePair Literal="input_ff" Numerical="0"/>
+            <ValuePair Literal="audio_pdm" Numerical="1"/>
+        </EnumParameter>
+    </ComponentType>
+
+    <!-- Outputs / Root Component -->
+    <ComponentType Name="Outputs">
+        <Component Name="handsfree" Type="HandsfreeOutput" Mapping="Amend1:Handsfree,Amend2:HF"/>
+        <Component Name="headset" Type="HeadsetOutput" Mapping="Amend1:Headset,Amend2:HS"/>
+        <Component Name="earpiece" Type="EarpieceOutput" Mapping="Amend1:Earpiece,Amend2:Earphone"/>
+        <Component Name="vibra" Type="VibraOutput" Mapping="Amend1:Vibra"/>
+        <Component Name="aux" Type="AuxOutput" Mapping="Amend1:AUXR,Amend2:AUXL"/>
+        <Component Name="hs_power_mode" Type="PowerMode" Mapping="Amend1:Headset"/>
+    </ComponentType>
+
+    <!-- === Inputs === -->
+
+    <!-- Inputs -->
+    <ComponentType Name="AnalogRoute">
+        <EnumParameter Name="mux" Size="8" Mapping="Control:Analog %1 Capture Route">
+            <ValuePair Literal="headset_mic" Numerical="0"/>
+            <ValuePair Literal="main_mic" Numerical="1"/>
+            <ValuePair Literal="aux_fm" Numerical="2"/>
+            <ValuePair Literal="off" Numerical="3"/>
+        </EnumParameter>
+    </ComponentType>
+
+    <!-- Inputs / Root Component -->
+    <ComponentType Name="Inputs">
+        <Component Name="right" Type="AnalogRoute" Mapping="Amend1:Right"/>
+        <Component Name="left" Type="AnalogRoute" Mapping="Amend1:Left"/>
+        <IntegerParameter Name="volume" ArrayLength="2" Size="8" Min="0" Max="4" Mapping="Control:Capture Volume" Description="Limits: 6..30, dBscale-min=6dB, dBscale-max=30dB, step=6dB"/>
+        <IntegerParameter Name="pre_volume" ArrayLength="2" Size="8" Min="0" Max="1" Mapping="Control:Capture Preamplifier Volume" Description="Limits: -6..0, dBscale-min=-6dB, dBscale-max=0dB, step=6dB"/>
+        <IntegerParameter Name="aux_volume" ArrayLength="2" Size="8" Min="0" Max="7" Mapping="Control:Aux FM Volume" Description="Limits: -18..24, dBscale-min=-186dB, dBscale-max=24dB, step=6dB"/>
+    </ComponentType>
+
+    <ComponentType Name="Twl6040">
+        <Component Name="output" Type="Outputs"/>
+        <Component Name="input" Type="Inputs"/>
+        <Component Name="power_mode" Type="PowerMode" Mapping="Amend1:TWL6040"/>
+    </ComponentType>
+
+</ComponentTypeSet>

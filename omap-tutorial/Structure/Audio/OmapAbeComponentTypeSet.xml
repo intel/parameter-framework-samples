@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentTypeSet xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../Schemas/ComponentTypeSet.xsd">
+
+    <!-- === Generic === -->
+    <ComponentType Name="Volume">
+        <IntegerParameter Name="volume" Min="0" Max="150" Size="8" Mapping="Control:%1 %2 Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+    </ComponentType>
+    <ComponentType Name="Volume2">
+        <IntegerParameter Name="volume" ArrayLength="2" Min="0" Max="150" Size="8" Mapping="Control:%1 %2 Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+    </ComponentType>
+    <!-- === Outputs === -->
+
+    <!-- Outputs / Generic -->
+    <ComponentType Name="OutputMixer">
+        <IntegerParameter Name="media_playback" Min="0" Max="150" Size="8" Mapping="Control:%1 Media Playback Volume" Description="Limits: -12..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="tones_playback" Min="0" Max="150" Size="8" Mapping="Control:%1 Tones Playback Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="voice_playback" Min="0" Max="150" Size="8" Mapping="Control:%1 Voice Playback Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="capture_playback" Min="0" Max="150" Size="8" Mapping="Control:%1 Capture Playback Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <BooleanParameter Name="mixer_media"  Mapping="Control:%1 Mixer Multimedia"/>
+        <BooleanParameter Name="mixer_tones"  Mapping="Control:%1 Mixer Tones"/>
+        <BooleanParameter Name="mixer_voice"  Mapping="Control:%1 Mixer Voice"/>
+        <BooleanParameter Name="mixer_capture"  Mapping="Control:%1 Mixer Capture"/>
+        <BooleanParameter Name="mixer_mono"  Mapping="Control:%1 Mono Mixer"/>
+    </ComponentType>
+
+    <!-- Outputs / Headset/Earpiece -->
+    <ComponentType Name="AbeDl1Output">
+        <Component Name="dl1" Type="OutputMixer" Mapping="Amend1:DL1"/>
+        <BooleanParameter Name="sdt_dl"  Mapping="Control:Sidetone Mixer Playback"/>
+        <BooleanParameter Name="sdt_ul"  Mapping="Control:Sidetone Mixer Capture"/>
+        <Component Name="sdt_dl_volume" Type="Volume" Mapping="Amend1:SDT,Amend2:DL"/>
+        <Component Name="sdt_ul_volume" Type="Volume" Mapping="Amend1:SDT,Amend2:UL"/>
+        <BooleanParameter Name="bt" Mapping="Control:DL1 BT_VX Switch"/>
+        <BooleanParameter Name="mm_ext" Mapping="Control:DL1 MM_EXT Switch"/>
+    </ComponentType>
+
+    <!-- Outputs / Root Component -->
+    <ComponentType Name="AbeOutputs">
+        <Component Name="handsfree" Type="OutputMixer" Mapping="Amend1:DL2"/>
+        <Component Name="headset" Type="AbeDl1Output"/>
+        <BooleanParameter Name="pdm"  Mapping="Control:DL1 PDM Switch"/>
+    </ComponentType>
+
+    <!-- === Inputs === -->
+    <ComponentType Name="Source">
+        <EnumParameter Name="route" Size="8" Mapping="Control:%1">
+            <ValuePair Literal="none" Numerical="0"/>
+            <ValuePair Literal="dmic1_left" Numerical="1"/>
+            <ValuePair Literal="dmic1_right" Numerical="2"/>
+            <ValuePair Literal="dmic2_left" Numerical="3"/>
+            <ValuePair Literal="dmic2_right" Numerical="4"/>
+            <ValuePair Literal="dmic3_left" Numerical="5"/>
+            <ValuePair Literal="dmic3_right" Numerical="6"/>
+            <ValuePair Literal="bt_left" Numerical="7"/>
+            <ValuePair Literal="bt_right" Numerical="8"/>
+            <ValuePair Literal="mm_ext_left" Numerical="9"/>
+            <ValuePair Literal="mm_ext_right" Numerical="10"/>
+            <ValuePair Literal="amic_left" Numerical="11"/>
+            <ValuePair Literal="amic_right" Numerical="12"/>
+            <ValuePair Literal="vxrec_left" Numerical="13"/>
+            <ValuePair Literal="vxrec_right" Numerical="14"/>
+        </EnumParameter>
+    </ComponentType>
+
+    <ComponentType Name="InputMixer">
+        <IntegerParameter Name="media_playback" Min="0" Max="150" Size="8" Mapping="Control:%2 Media Volume" Description="Limits: -12..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="tones_playback" Min="0" Max="150" Size="8" Mapping="Control:%2 Tones Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="voice_dl" Min="0" Max="150" Size="8" Mapping="Control:%2 Voice DL Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <IntegerParameter Name="capture_ul" Min="0" Max="150" Size="8" Mapping="Control:%2 Voice UL Volume" Description="Limits: -120..30, dBscale-min=-120dB, dBscale-max=30dB, step=1dB"/>
+        <BooleanParameter Name="mixer_media"  Mapping="Control:%1 Mixer Media Playback"/>
+        <BooleanParameter Name="mixer_tones"  Mapping="Control:%1 Mixer Tones"/>
+        <BooleanParameter Name="mixer_voice_ul"  Mapping="Control:%1 Mixer Voice Capture"/>
+        <BooleanParameter Name="mixer_voice_dl"  Mapping="Control:%1 Mixer Voice Playback"/>
+        <BooleanParameter Name="mixer_mono"  Mapping="Control:%2 Mono Mixer"/>
+    </ComponentType>
+
+    <!-- Inputs / Root Component -->
+    <ComponentType Name="AbeInputs">
+        <Component Name="amic" Type="Volume2" Mapping="Amend1:AMIC,Amend2:UL"/>
+        <Component Name="dmic1" Type="Volume2" Mapping="Amend1:DMIC1,Amend2:UL"/>
+        <Component Name="dmic2" Type="Volume2" Mapping="Amend1:DMIC2,Amend2:UL"/>
+        <Component Name="dmic3" Type="Volume2" Mapping="Amend1:DMIC3,Amend2:UL"/>
+        <Component Name="bt_ul" Type="Volume2" Mapping="Amend1:BT,Amend2:UL"/>
+        <Component Name="ul_ch0" Type="Source" Mapping="Amend1:MUX_UL10"/>
+        <Component Name="ul_ch1" Type="Source" Mapping="Amend1:MUX_UL11"/>
+        <Component Name="ul_ch2" Type="Source" Mapping="Amend1:MUX_UL00"/>
+        <Component Name="ul_ch3" Type="Source" Mapping="Amend1:MUX_UL01"/>
+        <Component Name="ul_ch4" Type="Source" Mapping="Amend1:MUX_UL02"/>
+        <Component Name="ul_ch5" Type="Source" Mapping="Amend1:MUX_UL03"/>
+        <Component Name="ul2_left" Type="Source" Mapping="Amend1:MUX_UL04"/>
+        <Component Name="ul2_right" Type="Source" Mapping="Amend1:MUX_UL05"/>
+        <Component Name="vx_ch0" Type="Source" Mapping="Amend1:MUX_VX0"/>
+        <Component Name="vx_ch1" Type="Source" Mapping="Amend1:MUX_VX1"/>
+        <Component Name="voice" Type="InputMixer" Mapping="Amend1:Capture,Amend2:AUDUL"/>
+    </ComponentType>
+
+    <ComponentType Name="OmapAbe">
+        <Component Name="output" Type="AbeOutputs"/>
+        <Component Name="input" Type="AbeInputs"/>
+    </ComponentType>
+
+</ComponentTypeSet>

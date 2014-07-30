@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../Schemas/Subsystem.xsd"
+    Name="alsa" Type="ALSA" Endianness="Little">
+    <ComponentLibrary>
+        <ComponentType Name="VolumeMixer">
+            <!-- Our volume parameter is linked with an alsa control called 'Master Playback Volume' -->
+            <!-- Retrieve the parameter information with an cget command on your control -->
+            <IntegerParameter Name="volume" Size="8" Min="0" Max="64"
+                              Mapping="Control:'Master Playback Volume'"/>
+        </ComponentType>
+    </ComponentLibrary>
+    <InstanceDefinition>
+        <!-- Our mixer is on the 'PCH' card, the name can be found in /proc/asound/cards -->
+        <Component Name="master" Type="VolumeMixer" Mapping="Card:PCH"/>
+    </InstanceDefinition>
+</Subsystem>

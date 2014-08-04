@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParameterFrameworkConfiguration
+    SystemClassName="MusicLibrary" ServerPort="5000" TuningAllowed="true">
+    <SubsystemPlugins>
+        <Location Folder="@PLUGIN_LOCATION_FOLDER@">
+            <Plugin Name="libfs-subsystem.so"/>
+        </Location>
+    </SubsystemPlugins>
+    <StructureDescriptionFileLocation Path="Structure/MusicLibrary/MusicLibraries.xml"/>
+    <SettingsConfiguration>
+        <ConfigurableDomainsFileLocation Path="Settings/MusicLibrary/Genres.xml"/>
+    </SettingsConfiguration>
+</ParameterFrameworkConfiguration>

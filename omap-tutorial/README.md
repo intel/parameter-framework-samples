@@ -139,6 +139,9 @@ Go to omap-tutorial folder.
 export LD_LIBRARY_PATH=/usr/local/lib
 
 test-platform ./PandaBoardES.xml
+ # Disable criteria check at XML load time in order to enable test without criteria.
+remote-process localhost 5001 setFailureOnFailedSettingsLoad false
+
 remote-process localhost 5001 start
 remote-process localhost 5000 listParameters /Audio
 remote-process localhost 5000 help
@@ -192,7 +195,7 @@ InclusiveCriterion  ClosingPlaybackRoutes  :  Media     Modem     Voice     Tone
 InclusiveCriterion  OpenedCaptureRoutes    :  Media     Modem     Voice     MultiChannel
 InclusiveCriterion  OpenedPlaybackRoutes   :  Media     Modem     Voice     Tones        DeepMedia
 InclusiveCriterion  SelectedInputDevice    :  SubMic             Headset    MainMic    Dmic1    Dmic2     Dmic1
-InclusiveCriterion  SelectedOutputDevice   :  Earpiece   Headset        Ihf
+InclusiveCriterion  SelectedOutputDevices   :  Earpiece   Headset        Ihf
 InclusiveCriterion  AudioSource            :  Default          Mic              None              VoiceCall  VoiceCommunication  VoiceDownlink  VoiceUplink
 ExclusiveCriterion  BandType               :  NB                SuperWB          Unknown          WB
 ExclusiveCriterion  ScreenState            :  Off               On

@@ -1,0 +1,13 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedInputDevices":"Headset",
+         "OpenedCaptureRoutes":"Media"
+        }
+    },
+    {"enable":{}},
+    {"script":"capture"},
+    {"unmute":{}}
+]

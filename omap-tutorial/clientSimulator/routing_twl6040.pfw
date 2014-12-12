@@ -1,0 +1,54 @@
+
+supDomain: Audio.twl6040
+	supDomain: Volume
+		domain: Headset
+			conf: Normal
+				ANY
+					SelectedOutputDevices Includes Headset
+					SelectedOutputDevices Includes Headphones
+				/Audio/omapabe/twl6040/output/headset/volume = 12 12
+
+			conf: Default
+				/Audio/omapabe/twl6040/output/headset/volume = 0 0
+
+supDomain: Routing
+	supDomain: Enable
+		RoutageState Includes Path
+
+		supDomain: twl6040
+			supDomain: Playback
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ANY
+								SelectedOutputDevices Includes Headset
+								SelectedOutputDevices Includes Headphones
+							/Audio/omapabe/twl6040/output/headset/enable/right = hs_dac
+							/Audio/omapabe/twl6040/output/headset/enable/left = hs_dac
+
+						conf: Disable
+							/Audio/omapabe/twl6040/output/headset/enable/right = off
+							/Audio/omapabe/twl6040/output/headset/enable/left = off
+
+			supDomain: Capture
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ANY
+								SelectedInputDevices Includes Headset
+							/Audio/omapabe/twl6040/input/right/mux = headset_mic
+							/Audio/omapabe/twl6040/input/left/mux = headset_mic
+
+						conf: Disable
+							/Audio/omapabe/twl6040/input/right/mux = off
+							/Audio/omapabe/twl6040/input/left/mux = off
+
+
+	supDomain: Configure
+		RoutageState Includes Configure
+
+		supDomain: twl6040
+			domain: Calibration.HWCodec
+				conf: Default
+					/Audio/omapabe/twl6040/output/hs_power_mode/value = high-performance
+					/Audio/omapabe/twl6040/power_mode/value = high-performance

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:noNamespaceSchemaLocation="../../Schemas/Subsystem.xsd"
+    Name="omapabe" Type="ALSA" Endianness="Little" Mapping="Card:omap5uevm">
+    <ComponentLibrary>
+        <xi:include href="Twl6040ComponentTypeSet.xml"/>
+        <xi:include href="OmapAbeComponentTypeSet.xml"/>
+    </ComponentLibrary>
+    <InstanceDefinition>
+        <Component Name="twl6040" Type="Twl6040"/>
+        <Component Name="abe" Type="OmapAbe"/>
+    </InstanceDefinition>
+</Subsystem>

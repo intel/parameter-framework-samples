@@ -2,7 +2,7 @@
 <ParameterFrameworkConfiguration
     SystemClassName="MusicLibrary" ServerPort="5000" TuningAllowed="true">
     <SubsystemPlugins>
-        <Location Folder="@PLUGIN_LOCATION_FOLDER@">
+        <Location Folder="">
             <Plugin Name="libfs-subsystem.so"/>
         </Location>
     </SubsystemPlugins>

@@ -12,6 +12,6 @@
     </ComponentLibrary>
 
     <InstanceDefinition>
-        <Component Name="artists" Type="Artists" Mapping="Directory:@INSTALL_LOCATION_FOLDER@/libraries"/>
+        <Component Name="artists" Type="Artists" Mapping="Directory:@CMAKE_INSTALL_PREFIX@/libraries"/>
     </InstanceDefinition>
 </Subsystem>

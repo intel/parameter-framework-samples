@@ -1,11 +1,8 @@
-set(PLUGIN_LOCATION_FOLDER "${CMAKE_PREFIX_PATH}/lib")
-set(INSTALL_LOCATION_FOLDER ${CMAKE_INSTALL_PREFIX})
+configure_file(Structure/MyMusic.xml.in ${CMAKE_CURRENT_BINARY_DIR}/Structure/MyMusic.xml @ONLY)
 
-message("plugin location = ${PLUGIN_LOCATION_FOLDER}")
-message("install location = ${INSTALL_LOCATION_FOLDER}")
-
-configure_file(ParameterFrameworkConfiguration.xml ${CMAKE_INSTALL_PREFIX}/ParameterFrameworkConfiguration.xml)
-configure_file(Structure/MyMusic.xml ${CMAKE_INSTALL_PREFIX}/Structure/MyMusic.xml)
+install(FILES
+    ParameterFrameworkConfiguration.xml
+    DESTINATION .)
 
 install(FILES
     Settings/Genres.xml
@@ -13,6 +10,7 @@ install(FILES
 
 install(FILES
     Structure/MusicLibraries.xml
+    ${CMAKE_CURRENT_BINARY_DIR}/Structure/MyMusic.xml
     DESTINATION Structure)
 
 install(FILES

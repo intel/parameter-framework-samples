@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Subsystem Name="my_library" Type="FS" Endianness="Little">
+<Subsystem Name="my_library" Type="FS">
     <ComponentLibrary>
 
         <ComponentType Name="Artists">

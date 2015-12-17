@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ParameterFrameworkConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="Schemas/ParameterFrameworkConfiguration.xsd"
-    SystemClassName="Audio" TuningAllowed="true" ServerPort="5000">
+<ParameterFrameworkConfiguration SystemClassName="Audio" TuningAllowed="true" ServerPort="5000">
     <SubsystemPlugins>
         <!-- Path to your plugin folder, where the alsa plugin is installed -->
         <!-- <Location Folder="<path/to/your/plugin/directory/>"> -->

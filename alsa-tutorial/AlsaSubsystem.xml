@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../../Schemas/Subsystem.xsd"
-    Name="alsa" Type="ALSA" Endianness="Little">
+<Subsystem Name="alsa" Type="ALSA">
     <ComponentLibrary>
         <ComponentType Name="VolumeMixer">
             <!-- Our volume parameter is linked with an alsa control called 'Master Playback Volume' -->

@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurableDomains SystemClassName="Audio">
+  <ConfigurableDomain Name="OutputDevice.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Ihf">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Is" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Excludes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Ihf">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
+          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
+          <IntegerParameter Name="DAC1">165 165</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
+          <IntegerParameter Name="MONO_DAC">130 130</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
+          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
+          <IntegerParameter Name="DAC1">130 130</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
+          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
+          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
+          <IntegerParameter Name="DAC1">132 132</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
+          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
+          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="InputDevice.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN">
+          <IntegerParameter Name="BOOST_GAIN">1</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="HwCodec.Calibration" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE">
+          <EnumParameter Name="DACL2_SOURCE">IF2_DAC_L</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE">
+          <EnumParameter Name="DACR2_SOURCE">IF2_DAC_R</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Mute.HwCodec.Playback.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Unmute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <CompoundRule Type="All">
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+            </CompoundRule>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+            </CompoundRule>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Unmute">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED">
+          <BooleanParameter Name="MUTED">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED">
+          <BooleanParameter Name="MUTED">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED">
+          <BooleanParameter Name="MUTED">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED">
+          <BooleanParameter Name="MUTED">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Playback.Ihf" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+            </CompoundRule>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L">
+          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
+          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L">
+          <BooleanParameter Name="SWITCH_L">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
+          <BooleanParameter Name="SWITCH_R">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Playback.Multimedia.Ihf" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Playback.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="All">
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+            </CompoundRule>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+            </CompoundRule>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L">
+          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R">
+          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L">
+          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R">
+          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Playback.Multimedia.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+              <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+            </CompoundRule>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Playback.Multimedia.Playback" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Capture.Capture" SequenceAware="true">
+    <Configurations>
+      <Configuration Name="Analog">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Analog">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.HwCodec.Capture.AllMics" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE">
+          <EnumParameter Name="SOURCE">ADC</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE">
+          <EnumParameter Name="SOURCE">DAC MIX</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Mute.Calibration" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Mute.HwCodec.Playback.Internal" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Unmute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Unmute">
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Mute.Media.Playback.Regular" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Unmute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Unmute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Mute.Media.Playback.Deep" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Unmute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Unmute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Mute.Media.Capture.Regular" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Unmute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="Media"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm1_out/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Unmute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm1_out/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm1_out/gain/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Calibration" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/interleaver/codec_out/slot0/source"/>
+      <ConfigurableElement Path="/Audio/sst/interleaver/codec_out/slot1/source"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/interleaver/codec_out/slot0/source">
+          <EnumParameter Name="source">codec_out_0</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/interleaver/codec_out/slot1/source">
+          <EnumParameter Name="source">codec_out_1</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.Media.ToSpeakerEq" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+          </CompoundRule>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/main_mixer/pcm1/mix/pcm0"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/pcm1/mix/pcm0">
+          <BooleanParameter Name="pcm0">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/pcm1/mix/pcm0">
+          <BooleanParameter Name="pcm0">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.MediaMixer.Regular" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/regular"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/regular">
+          <BooleanParameter Name="regular">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/regular">
+          <BooleanParameter Name="regular">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.MediaMixer.Deep" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/deep"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/deep">
+          <BooleanParameter Name="deep">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/sst/media_mixer/media0/mix/deep">
+          <BooleanParameter Name="deep">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+</ConfigurableDomains>

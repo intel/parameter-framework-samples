@@ -1,0 +1,10 @@
+{
+    "play":[
+        "../common/test-scripts/play.sh hw:0,0 /home/lab/intel/asus-t100/Epicsax_48.wav",
+        "asynchronous"
+        ],
+    "capture":[
+        "../common/test-scripts/capture.sh hw:0,0 /home/lab/intel/asus-t100/test.wav",
+        "asynchronous"
+        ]
+}

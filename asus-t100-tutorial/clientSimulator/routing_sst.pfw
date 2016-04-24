@@ -1,0 +1,175 @@
+domainGroup: Routing.Sst
+
+	####################################
+	############### Mute ###############
+	####################################
+
+	domainGroup: Mute
+		RoutageState Includes Flow
+
+		domain: Calibration
+			conf: Default
+				/Audio/sst/pipe/pcm0_in/gain/switch = 1
+#				/Audio/sst/pipe/sprot_loop/gain/switch = 1
+				/Audio/sst/pipe/media_loop1/gain/switch = 1
+#				/Audio/sst/pipe/media_loop2/gain/switch = 1
+
+		domainGroup: HwCodec
+
+			domainGroup: Playback
+
+				domain: Internal
+					conf: Unmute
+						OpenedPlaybackRoutes Includes HwCodec0IA
+						/Audio/sst/pipe/codec_out/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/codec_out/gain/switch = 0
+
+		domainGroup: Media
+
+			domainGroup: Playback
+
+				domain: Regular
+					conf: Unmute
+						OpenedPlaybackRoutes Includes Media
+						/Audio/sst/pipe/pcm_regular/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/pcm_regular/gain/switch = 0
+
+				domain: Deep
+					conf: Unmute
+						OpenedPlaybackRoutes Includes DeepMedia
+						/Audio/sst/pipe/pcm_deep/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/pcm_deep/gain/switch = 0
+
+			domainGroup: Capture
+
+				domain: Regular
+					conf: Unmute
+						OpenedCaptureRoutes Includes Media
+						/Audio/sst/pipe/pcm1_out/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/pcm1_out/gain/switch = 0
+
+	#########################################
+	################ Enable #################
+	#########################################
+
+
+	#########################################
+	############### Configure ###############
+	#########################################
+
+	domainGroup: Configure
+		RoutageState Includes Configure
+
+		domain: Calibration
+			conf: Default
+#				component: /Audio/sst/pipe/codec_in/deinterleaver
+#					# Amic (slot0) => CODEC_1/LEFT + RIGHT
+#					/codec_in1_0/source = slot2
+#					/codec_in1_1/source = slot2
+				component: /Audio/sst/interleaver/codec_out
+					/slot0/source = codec_out_0
+					/slot1/source = codec_out_1
+#					/slot0/source = codec_out0_0
+#					/slot1/source = codec_out0_1
+#					/slot2/source = codec_out1_0
+#					/slot3/source = codec_out1_1
+
+		domainGroup: Playback
+
+			# Used for all kinds of media playback on an HwCodec0 accessory that
+			# needs speaker protection
+#			domain: SpeakerEqToSprot
+#				conf: Bind
+#					ANY
+#						OpenedPlaybackRoutes Includes Media
+#						OpenedPlaybackRoutes Includes DeepMedia
+#					OpenedPlaybackRoutes Includes HwCodec0IA
+#					SelectedOutputDevices Includes Ihf
+#					/Audio/sst/main_mixer/sprot_loop/mix/media_loop1 = 1
+#				conf: Unbind
+#					/Audio/sst/main_mixer/sprot_loop/mix/media_loop1 = 0
+
+			domainGroup: Media
+				confType: Bind
+					ANY
+						OpenedPlaybackRoutes Includes Media
+#						OpenedPlaybackRoutes Includes DeepMedia
+
+				domain: ToSpeakerEq
+					conf: Bind
+						OpenedPlaybackRoutes Includes HwCodec0IA
+						SelectedOutputDevices Includes Ihf
+#						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 1
+						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 1
+					conf: Unbind
+#						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 0
+						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 0
+
+			domainGroup: MediaMixer
+
+				domain: Regular
+					conf: Bind
+						OpenedPlaybackRoutes Includes Media
+						/Audio/sst/media_mixer/media0/mix/regular = 1
+					conf: Unbind
+						/Audio/sst/media_mixer/media0/mix/regular = 0
+
+				domain: Deep
+					conf: Bind
+						OpenedPlaybackRoutes Includes DeepMedia
+						/Audio/sst/media_mixer/media0/mix/deep = 1
+					conf: Unbind
+						/Audio/sst/media_mixer/media0/mix/deep = 0
+
+
+#			domainGroup: HwCodec
+#
+#				# Used for all streams (voice or media) going to an HwCodec0
+#				# accessory that needs speaker protection
+#				domain: SprotToSpeaker
+#					conf: Bind
+#						OpenedPlaybackRoutes Includes HwCodec0IA
+#						SelectedOutputDevices Includes Ihf
+#						/Audio/sst/main_mixer/ihf_or_earpiece/mix/sprot_loop = 1
+#					conf: Unbind
+#						/Audio/sst/main_mixer/ihf_or_earpiece/mix/sprot_loop = 0
+
+		domainGroup: Capture
+			confType: Bind
+				OpenedCaptureRoutes Includes Media
+
+			domainGroup: Media
+				confType: Bind
+					AudioSource IsNot VoiceUplink
+					AudioSource IsNot VoiceDownlink
+					AudioSource IsNot VoiceCall
+
+#				domain: MediaLoop
+#					conf: Bind
+#						OpenedCaptureRoutes Includes HwCodec0IA
+#						/Audio/sst/main_mixer/pcm1/mix/media_loop2 = 1
+#					conf: Unbind
+#						/Audio/sst/main_mixer/pcm1/mix/media_loop2 = 0
+
+			domainGroup: HwCodec
+				OpenedCaptureRoutes Includes HwCodec0IA
+
+#				domain: Deinterleaver
+#					# Media
+#					# Front mic (slot0) => CODEC_0/LEFT + RIGHT
+#					conf: FrontMic
+#						SelectedInputDevices Includes Main
+#						component: /Audio/sst/pipe/codec_in/deinterleaver
+#							/codec_in0_0/source = slot0
+#							/codec_in0_1/source = slot0
+#					# Back mic (slot1) => CODEC_0/LEFT + RIGHT
+#					conf: BackMic
+#						SelectedInputDevices Includes Back
+#						component: /Audio/sst/pipe/codec_in/deinterleaver
+#							/codec_in0_0/source = slot1
+#							/codec_in0_1/source = slot1
+#

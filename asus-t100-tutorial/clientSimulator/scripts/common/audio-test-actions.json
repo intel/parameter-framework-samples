@@ -1,0 +1,22 @@
+{
+    "mute":
+        {"setCriterion":
+            {"RoutageState":"Flow"}
+        },
+    "disable":
+        {"setCriterion":
+            {"RoutageState":"Path"}
+        },
+    "configure":
+        {"setCriterion":
+            {"RoutageState":"Configure"}
+        },
+    "enable":
+        {"setCriterion":
+            {"RoutageState":"Path Configure"}
+        },
+    "unmute":
+        {"setCriterion":
+            {"RoutageState":"Flow Path Configure"}
+        }
+}

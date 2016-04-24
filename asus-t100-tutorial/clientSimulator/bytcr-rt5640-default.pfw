@@ -1,0 +1,132 @@
+domain: HwCodec.Calibration
+	conf: Default
+		/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE = IF2_DAC_L
+		/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE = IF2_DAC_R
+
+##############################
+#	 Mute & Unmute Steps
+##############################
+
+supDomain: Routing.Mute
+	# Definition of Mute and Unmute for futur use in this supDomain
+	RoutageState Includes Flow
+
+	supDomain: HwCodec.Playback
+		domain: Headset
+			conf: Unmute
+				ALL
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED = 0
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED = 0
+
+			conf: Mute
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED = 1
+
+##############################
+#	 Configure Step
+##############################
+
+supDomain: Routing.Configure
+	RoutageState Includes Configure
+
+	supDomain: HwCodec.Playback
+		domain: Ihf
+			conf: Bind
+				ALL
+					SelectedOutputDevices Includes Ihf
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R = 1
+
+			conf: Unbind
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L = 0
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R = 0
+
+		domain: Multimedia.Ihf
+			conf: Bind
+				ALL
+					SelectedOutputDevices Includes Ihf
+					OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH = 1
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH = 1
+
+			conf: Unbind
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH = 0
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH = 0
+
+		domain: Headset
+			conf: Bind
+				ALL
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH = 1
+
+			conf: Unbind
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R = 1
+				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH = 0
+
+		domain: Multimedia.Headset
+			conf: Bind
+				ALL
+					OpenedPlaybackRoutes Includes HwCodec0IA
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH = 1
+
+			conf: Unbind
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH = 0
+
+		domain: Multimedia.Playback
+			conf: Bind
+				OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH = 1
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH = 1
+
+			conf: Unbind
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH = 0
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH = 0
+
+	supDomain: HwCodec.Capture
+		domain: Capture sequenceAware
+			conf: Analog
+				ALL
+					SelectedInputDevices Includes Headset
+					OpenedCaptureRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH = 1
+				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH = 1
+				/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH = 1
+
+		domain: AllMics
+			conf: Bind
+				ANY
+					OpenedCaptureRoutes Includes HwCodec0IA
+
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE = 1
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH = 1
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH = 1
+
+			conf: Unbind
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE = 0
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH = 0
+				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH = 0

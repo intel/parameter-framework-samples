@@ -1,0 +1,14 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedOutputDevices":"",
+         "OpenedPlaybackRoutes":"",
+         "SelectedInputDevices":"",
+         "OpenedCaptureRoutes":""
+        }
+    },
+    {"enable":{}},
+    {"unmute":{}}
+]

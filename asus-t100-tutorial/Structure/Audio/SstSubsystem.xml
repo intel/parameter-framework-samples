@@ -17,6 +17,7 @@
         <xi:include href="intel/SbaFir.xml"/>
         <xi:include href="intel/SbaIir.xml"/>
         <xi:include href="intel/Mdrc.xml"/>
+        <xi:include href="intel/Lpro.xml"/>
         <xi:include href="intel/SbaEqualizers.xml"/>
 
         <ComponentType Name="Tx_slot">
@@ -27,7 +28,7 @@
             </EnumParameter>
         </ComponentType>
 
-        <ComponentType Name="Interleaver" Mapping="Amend2:interleaver">
+        <ComponentType Name="Interleaver" Mapping="Amend2:tx interleaver">
             <Component Name="slot0" Type="Tx_slot" Mapping="Amend3:slot 0"/>
             <Component Name="slot1" Type="Tx_slot" Mapping="Amend3:slot 1"/>
         </ComponentType>
@@ -35,21 +36,23 @@
         <!-- An output attached to the main mixer matrix can receive streams from the following sources -->
         <ComponentType Name="MainMixerOut">
             <ParameterBlock Name="mix">
-                <BooleanParameter Name="pcm0" Mapping="Control:%1 mix 0 pcm0_in"/>
-                <BooleanParameter Name="bt" Mapping="Control:%1 mix 0 bt_in"/>
+                <BooleanParameter Name="pcm0" Mapping="Control:%1 mix 0 pcm0_in Switch"/>
+                <BooleanParameter Name="bt" Mapping="Control:%1 mix 0 bt_in Switch"/>
                 <!-- On bytcr-rt56xx-common, there is no TDM between the SST and the Codec, so we can only use codec0 -->
-                <BooleanParameter Name="codec_in" Mapping="Control:%1 mix 0 codec_in0"/>
-                <BooleanParameter Name="media_loop1" Mapping="Control:%1 mix 0 media_loop1_in"/>
+                <BooleanParameter Name="codec_in" Mapping="Control:%1 mix 0 codec_in0 Switch"/>
+                <BooleanParameter Name="media_loop1" Mapping="Control:%1 mix 0 media_loop1_in Switch"/>
+                <!--BooleanParameter Name="media_loop2" Mapping="Control:%1 mix 0 media_loop2_in Switch"/-->
+                <BooleanParameter Name="sprot_loop" Mapping="Control:%1 mix 0 sprot_loop_in Switch"/>
             </ParameterBlock>
         </ComponentType>
 
         <!-- An output attached to the media mixer matrix can receive streams from the following sources -->
         <ComponentType Name="MediaMixerOut">
             <ParameterBlock Name="mix">
-                <BooleanParameter Name="compressed" Mapping="Control:%1 mix 0 media0_in"/>
-                <BooleanParameter Name="regular" Mapping="Control:%1 mix 0 media1_in"/>
-                <BooleanParameter Name="media2_in" Mapping="Control:%1 mix 0 media2_in"/>
-                <BooleanParameter Name="deep" Mapping="Control:%1 mix 0 media3_in"/>
+                <BooleanParameter Name="compressed" Mapping="Control:%1 mix 0 media0_in Switch"/>
+                <BooleanParameter Name="regular" Mapping="Control:%1 mix 0 media1_in Switch"/>
+                <BooleanParameter Name="media2_in" Mapping="Control:%1 mix 0 media2_in Switch"/>
+                <BooleanParameter Name="deep" Mapping="Control:%1 mix 0 media3_in Switch"/>
             </ParameterBlock>
         </ComponentType>
 
@@ -64,32 +67,36 @@
     <InstanceDefinition>
         <!-- Pipe instances definitions -->
         <ParameterBlock Name="pipe">
-            <Component Name="pcm_compressed" Type="GainPipe" Mapping="Amend1:media0_in"/>
+            <!--Component Name="pcm_compressed" Type="GainPipe" Mapping="Amend1:media0_in"/-->
             <Component Name="pcm_regular" Type="GainPipe" Mapping="Amend1:media1_in"/>
-            <Component Name="pcm_deep" Type="GainPipe" Mapping="Amend1:media3_in"/>
+            <!--Component Name="pcm_deep" Type="GainPipe" Mapping="Amend1:media3_in"/-->
             <Component Name="pcm0_in" Type="GainPipe" Mapping="Amend1:pcm0_in"/>
             <Component Name="pcm1_out" Type="GainPipe" Mapping="Amend1:pcm1_out"/>
             <!-- On bytcr-rt56xx-common, there is no TDM between the SST and the Codec, so we can only use codec0 -->
             <Component Name="codec_out" Type="GainPipe" Mapping="Amend1:codec_out0"/>
             <Component Name="codec_in" Type="SspInPipe" Mapping="Amend1:codec_in0"/>
-            <ParameterBlock Name="cws_out">
+            <!--ParameterBlock Name="cws_out">
                 <Component Name="bt" Type="GainPipe" Mapping="Amend1:bt_out"/>
                 <Component Name="demux" Type="BtFmMuxer" Mapping="Amend1:ssp1_in,Amend2:demux,Amend3:0"/>
-            </ParameterBlock>
-            <ParameterBlock Name="cws_in">
+            </ParameterBlock-->
+            <!--ParameterBlock Name="cws_in">
                 <Component Name="bt" Type="SspInPipe" Mapping="Amend1:bt_in"/>
                 <Component Name="mux" Type="BtFmMuxer" Mapping="Amend1:ssp1_out,Amend2:mux,Amend3:0"/>
-            </ParameterBlock>
+            </ParameterBlock-->
             <Component Name="media_loop1" Type="MediaEqPipe" Mapping="Amend1:media_loop1_out"/>
+            <Component Name="media_loop2" Type="MediaEqPipe" Mapping="Amend1:media_loop2_out"/>
+            <Component Name="sprot_loop" Type="MediaEqPipe" Mapping="Amend1:sprot_loop_out"/>
         </ParameterBlock>
 
         <!-- Main Mixer -->
         <ParameterBlock Name="main_mixer">
             <!-- On bytcr-rt56xx-common, there is no TDM between the SST and the Codec, so we can only use codec0 -->
             <Component Name="codec_out" Type="MainMixerOut" Mapping="Amend1:codec_out0"/>
-            <Component Name="bt" Type="MainMixerOut" Mapping="Amend1:bt_out"/>
+            <!--Component Name="bt" Type="MainMixerOut" Mapping="Amend1:bt_out"/-->
             <Component Name="pcm1" Type="MainMixerOut" Mapping="Amend1:pcm1_out"/>
             <Component Name="media_loop1" Type="MainMixerOut" Mapping="Amend1:media_loop1_out"/>
+            <Component Name="media_loop2" Type="MainMixerOut" Mapping="Amend1:media_loop2_out"/>
+            <Component Name="sprot_loop" Type="MainMixerOut" Mapping="Amend1:sprot_loop_out"/>
         </ParameterBlock>
 
         <ParameterBlock Name="media_mixer">

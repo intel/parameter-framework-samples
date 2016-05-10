@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ComponentTypeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../../../Schemas/ComponentTypeSet.xsd">
-    <ComponentType Name="Mdrc" Mapping="ByteControlWithLength:%1 mdrp %3 params">
+    <ComponentType Name="Mdrc">
         <Component Name="switch" Type="SwitchParam"/>
         <IntegerParameter Name="power_threshold" Size="8" Unit="dB/(-2)"/>
         <EnumParameter Name="mode" Size="8" Description="Sets the filter map configuration">

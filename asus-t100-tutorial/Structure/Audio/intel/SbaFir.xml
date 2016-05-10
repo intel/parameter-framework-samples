@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ComponentTypeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../../../Schemas/ComponentTypeSet.xsd">
-    <ComponentType Name="SbaFir" Mapping="ByteControlWithLength:%1 fir %3 params">
+    <ComponentType Name="SbaFir">
         <Component Name="switch" Type="SwitchParam"/>
         <Component Name="channel_conf" Type="ConfParam"/>
         <ParameterBlock Name="channel" ArrayLength="2"

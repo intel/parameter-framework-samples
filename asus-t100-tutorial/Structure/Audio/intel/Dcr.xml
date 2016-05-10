@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ComponentTypeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../../../Schemas/ComponentTypeSet.xsd">
-    <ComponentType Name="Dcr" Mapping="ByteControlWithLength:%1 dcr %3 params">
+    <ComponentType Name="Dcr">
         <Component Name="switch" Type="SwitchParam"/>
         <Component Name="channel_conf" Type="ConfParam"/>
         <ParameterBlock Name="channel" ArrayLength="2"
@@ -21,8 +21,13 @@
         </ParameterBlock>
     </ComponentType>
 
+    <ComponentType Name="SstDcr" Mapping="Control:%1 dcr %3 params">
+        <IntegerParameter Name="length" Size="16"/>
+        <Component Name="algo" Type="Dcr"/>
+    </ComponentType>
+
     <!-- Needs Gain.xml to be included too -->
     <ComponentType Name="SspInPipe" Extends="GainPipe">
-        <Component Name="dcr" Type="Dcr" Mapping="Amend3:0"/>
+        <Component Name="dcr" Type="SstDcr" Mapping="Amend3:0"/>
     </ComponentType>
 </ComponentTypeSet>

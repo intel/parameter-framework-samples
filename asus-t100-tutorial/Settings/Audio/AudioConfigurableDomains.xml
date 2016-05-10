@@ -126,6 +126,649 @@
       </Configuration>
     </Settings>
   </ConfigurableDomain>
+  <ConfigurableDomain Name="OutputDevice.Sst.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Ihf">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Is" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Excludes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Ihf">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop1.Equalizer.fir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop1.Equalizer.iir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/iir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/iir/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop1.Mdrc" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <IntegerParameter Name="power_threshold">0</IntegerParameter>
+            <EnumParameter Name="mode">simple</EnumParameter>
+            <IntegerParameter Name="nbr_bands">2</IntegerParameter>
+            <EnumParameter Name="filter_conf">parallel_arch_5th</EnumParameter>
+            <ParameterBlock Name="band">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8994934558868408203125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8954265117645263671875</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.9603793621063232421875</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">-1.9561820030212402343750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.9366021156311035156250</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">0.0000000000000000000000</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">8960</IntegerParameter>
+                <IntegerParameter Name="level_u">5120</IntegerParameter>
+                <IntegerParameter Name="gain_b">2304</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">0</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.9255115985870361328125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.9194989204406738281250</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5387456417083740234375</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2170753479003906250000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.4452285766601562500000</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.4396698474884033203125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6656</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2816</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="2">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8588137626647949218750</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8353552818298339843750</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5445747375488281250000</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2181944847106933593750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.3989596366882324218750</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.3747951984405517578125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">5120</IntegerParameter>
+                <IntegerParameter Name="level_u">2560</IntegerParameter>
+                <IntegerParameter Name="gain_b">1536</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">51</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">20</IntegerParameter>
+                <IntegerParameter Name="loudness_release">20</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="3">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.7010886669158935546875</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.5644578933715820312500</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5643525123596191406250</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2245235443115234375000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.2679491043090820312500</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.1911036968231201171875</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6400</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2560</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">50</IntegerParameter>
+                <IntegerParameter Name="loudness_release">50</IntegerParameter>
+                <IntegerParameter Name="gain_attack">3</IntegerParameter>
+                <IntegerParameter Name="gain_release">3</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop2.Equalizer.fir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/fir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/fir/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop2.Equalizer.iir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </ParameterBlock>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Sst.MediaLoop2.Mdrc" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/mdrc/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/mdrc/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </ParameterBlock>
+            <IntegerParameter Name="power_threshold">0</IntegerParameter>
+            <EnumParameter Name="mode">simple</EnumParameter>
+            <IntegerParameter Name="nbr_bands">2</IntegerParameter>
+            <EnumParameter Name="filter_conf">parallel_arch_5th</EnumParameter>
+            <ParameterBlock Name="band">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8994934558868408203125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8954265117645263671875</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.9603793621063232421875</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">-1.9561820030212402343750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.9366021156311035156250</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">0.0000000000000000000000</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">8960</IntegerParameter>
+                <IntegerParameter Name="level_u">5120</IntegerParameter>
+                <IntegerParameter Name="gain_b">2304</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">0</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.9255115985870361328125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.9194989204406738281250</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5387456417083740234375</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2170753479003906250000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.4452285766601562500000</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.4396698474884033203125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6656</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2816</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="2">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8588137626647949218750</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8353552818298339843750</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5445747375488281250000</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2181944847106933593750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.3989596366882324218750</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.3747951984405517578125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">5120</IntegerParameter>
+                <IntegerParameter Name="level_u">2560</IntegerParameter>
+                <IntegerParameter Name="gain_b">1536</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">51</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">20</IntegerParameter>
+                <IntegerParameter Name="loudness_release">20</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="3">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.7010886669158935546875</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.5644578933715820312500</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5643525123596191406250</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2245235443115234375000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.2679491043090820312500</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.1911036968231201171875</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6400</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2560</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">50</IntegerParameter>
+                <IntegerParameter Name="loudness_release">50</IntegerParameter>
+                <IntegerParameter Name="gain_attack">3</IntegerParameter>
+                <IntegerParameter Name="gain_release">3</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
   <ConfigurableDomain Name="HwCodec.Calibration" SequenceAware="false">
     <Configurations>
       <Configuration Name="Default">
@@ -214,6 +857,8 @@
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L"/>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
@@ -223,6 +868,12 @@
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
           <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
         </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L">
@@ -230,6 +881,12 @@
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
           <BooleanParameter Name="SWITCH_R">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -254,6 +911,7 @@
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH"/>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
@@ -263,12 +921,18 @@
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
@@ -379,6 +1043,10 @@
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH"/>
       <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
@@ -388,12 +1056,36 @@
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
           <BooleanParameter Name="SWITCH">1</BooleanParameter>
         </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH">
+          <BooleanParameter Name="INF1_SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH">
+          <BooleanParameter Name="INF1_SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH">
+          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH">
+          <BooleanParameter Name="INF1_SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH">
+          <BooleanParameter Name="INF1_SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH">
+          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH">
           <BooleanParameter Name="SWITCH">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
@@ -485,16 +1177,32 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch"/>
-      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/length"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/iir/length"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/length"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/fir/length"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/length"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/mdrc/length"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Default">
-        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch">
-          <BooleanParameter Name="switch">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/length">
+          <IntegerParameter Name="length">272</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch">
-          <BooleanParameter Name="switch">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/iir/length">
+          <IntegerParameter Name="length">300</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/length">
+          <IntegerParameter Name="length">286</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/fir/length">
+          <IntegerParameter Name="length">272</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/length">
+          <IntegerParameter Name="length">300</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/mdrc/length">
+          <IntegerParameter Name="length">286</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -545,10 +1253,14 @@
     </Configurations>
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Unmute">
         <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch">
           <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
@@ -556,34 +1268,7 @@
         <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/switch">
           <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-      </Configuration>
-    </Settings>
-  </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Sst.Mute.Media.Playback.Deep" SequenceAware="false">
-    <Configurations>
-      <Configuration Name="Unmute">
-        <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
-          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
-        </CompoundRule>
-      </Configuration>
-      <Configuration Name="Mute">
-        <CompoundRule Type="All">
-          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Flow"/>
-        </CompoundRule>
-      </Configuration>
-    </Configurations>
-    <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch"/>
-    </ConfigurableElements>
-    <Settings>
-      <Configuration Name="Unmute">
-        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch">
-          <BooleanParameter Name="switch">1</BooleanParameter>
-        </ConfigurableElement>
-      </Configuration>
-      <Configuration Name="Mute">
-        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/switch">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/switch">
           <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
@@ -642,7 +1327,7 @@
       </Configuration>
     </Settings>
   </ConfigurableDomain>
-  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.Media.ToSpeakerEq" SequenceAware="false">
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.Media.Internal" SequenceAware="false">
     <Configurations>
       <Configuration Name="Bind">
         <CompoundRule Type="All">
@@ -651,7 +1336,6 @@
             <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
           </CompoundRule>
           <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
-          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
         </CompoundRule>
       </Configuration>
       <Configuration Name="Unbind">
@@ -671,6 +1355,89 @@
       </Configuration>
       <Configuration Name="Unbind">
         <ConfigurableElement Path="/Audio/sst/main_mixer/pcm1/mix/pcm0">
+          <BooleanParameter Name="pcm0">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.Media.ToSpeakerEq" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+          </CompoundRule>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/main_mixer/media_loop1/mix/pcm0"/>
+      <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/media_loop1"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/media_loop1/mix/pcm0">
+          <BooleanParameter Name="pcm0">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/media_loop1">
+          <BooleanParameter Name="media_loop1">1</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/media_loop1/mix/pcm0">
+          <BooleanParameter Name="pcm0">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/media_loop1">
+          <BooleanParameter Name="media_loop1">0</BooleanParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Sst.Configure.Playback.Media.ToHeadsetOnly" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Bind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+          </CompoundRule>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="HwCodec0IA"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Excludes" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/pcm0"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Bind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/pcm0">
+          <BooleanParameter Name="pcm0">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Unbind">
+        <ConfigurableElement Path="/Audio/sst/main_mixer/codec_out/mix/pcm0">
           <BooleanParameter Name="pcm0">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>

@@ -9,10 +9,16 @@ domainGroup: Routing.Sst
 
 		domain: Calibration
 			conf: Default
-				/Audio/sst/pipe/pcm0_in/gain/switch = 1
 #				/Audio/sst/pipe/sprot_loop/gain/switch = 1
-				/Audio/sst/pipe/media_loop1/gain/switch = 1
 #				/Audio/sst/pipe/media_loop2/gain/switch = 1
+				# Default length for Algorithms of Media Loop1  (Playback Path)
+				/Audio/sst/pipe/media_loop1/equalizer/fir/length = 272
+				/Audio/sst/pipe/media_loop1/equalizer/iir/length = 300
+				/Audio/sst/pipe/media_loop1/mdrc/length = 286
+				# Default length for Algorithms of Media Loop2 (Capture Path)
+				/Audio/sst/pipe/media_loop2/equalizer/fir/length = 272
+				/Audio/sst/pipe/media_loop2/equalizer/iir/length = 300
+				/Audio/sst/pipe/media_loop2/mdrc/length = 286
 
 		domainGroup: HwCodec
 
@@ -33,15 +39,17 @@ domainGroup: Routing.Sst
 					conf: Unmute
 						OpenedPlaybackRoutes Includes Media
 						/Audio/sst/pipe/pcm_regular/gain/switch = 1
+						/Audio/sst/pipe/pcm0_in/gain/switch = 1
 					conf: Mute
 						/Audio/sst/pipe/pcm_regular/gain/switch = 0
+						/Audio/sst/pipe/pcm0_in/gain/switch = 0
 
-				domain: Deep
-					conf: Unmute
-						OpenedPlaybackRoutes Includes DeepMedia
-						/Audio/sst/pipe/pcm_deep/gain/switch = 1
-					conf: Mute
-						/Audio/sst/pipe/pcm_deep/gain/switch = 0
+#				domain: Deep
+#					conf: Unmute
+#						OpenedPlaybackRoutes Includes DeepMedia
+#						/Audio/sst/pipe/pcm_deep/gain/switch = 1
+#					conf: Mute
+#						/Audio/sst/pipe/pcm_deep/gain/switch = 0
 
 			domainGroup: Capture
 
@@ -99,15 +107,37 @@ domainGroup: Routing.Sst
 						OpenedPlaybackRoutes Includes Media
 #						OpenedPlaybackRoutes Includes DeepMedia
 
+				domain: Internal
+					conf: Bind
+						OpenedPlaybackRoutes Includes HwCodec0IA
+						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 1
+
+					conf: Unbind
+						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 0
+
+
 				domain: ToSpeakerEq
 					conf: Bind
 						OpenedPlaybackRoutes Includes HwCodec0IA
 						SelectedOutputDevices Includes Ihf
-#						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 1
-						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 1
+						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 1
+						/Audio/sst/main_mixer/codec_out/mix/media_loop1 = 1
+						/Audio/sst/pipe/media_loop1/gain/switch = 1
+
 					conf: Unbind
-#						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 0
-						/Audio/sst/main_mixer/pcm1/mix/pcm0 = 0
+						/Audio/sst/main_mixer/media_loop1/mix/pcm0 = 0
+						/Audio/sst/main_mixer/codec_out/mix/media_loop1 = 0
+						/Audio/sst/pipe/media_loop1/gain/switch = 0
+
+				domain: ToHeadsetOnly
+					conf: Bind
+						OpenedPlaybackRoutes Includes HwCodec0IA
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Excludes Ihf
+						/Audio/sst/main_mixer/codec_out/mix/pcm0 = 1
+
+					conf: Unbind
+						/Audio/sst/main_mixer/codec_out/mix/pcm0 = 0
 
 			domainGroup: MediaMixer
 

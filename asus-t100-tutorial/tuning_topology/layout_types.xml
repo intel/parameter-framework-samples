@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LAYOUT_TYPES>
+    <SUBSYSTEM_TYPE version="1.0" image="" name="t_realtek">
+        <INPUT name="aif1_in" position="Continuous"/>
+        <OUTPUT name="aif1_out" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="sst.png" name="t_sst">
+        <INPUT name="ssp0_in" position="Continuous"/>
+        <INPUT name="ssp1_in" position="Continuous"/>
+        <INPUT name="ssp2_in" position="Continuous"/>
+        <OUTPUT name="ssp0_out" position="Continuous"/>
+        <OUTPUT name="ssp1_out" position="Continuous"/>
+        <OUTPUT name="ssp2_out" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_0_in_1_out">
+        <OUTPUT name="out0" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_1_in_0_out">
+        <INPUT name="in0"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_0_in_2_out">
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_2_in_0_out">
+        <INPUT name="in0"/>
+        <INPUT name="in1"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_1_in_1_out">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE version="1.0" image="pipe.png" name="t_subsyst_2_in_2_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="pipe.png" name="t_subsyst_3_in_2_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <INPUT name="in2" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="pipe.png" name="t_subsyst_4_in_1_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <INPUT name="in2" position="Continuous"/>
+        <INPUT name="in3" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="pipe.png" name="t_subsyst_4_in_3_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <INPUT name="in2" position="Continuous"/>
+        <INPUT name="in3" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+        <OUTPUT name="out2" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="pipe.png" name="t_subsyst_4_in_4_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <INPUT name="in2" position="Continuous"/>
+        <INPUT name="in3" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+        <OUTPUT name="out2" position="Continuous"/>
+        <OUTPUT name="out3" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="matrix.png" name="t_media_matrix">
+        <INPUT name="media1_in" position="Continuous"/>
+        <OUTPUT name="media0_out" position="Continuous"/>
+        <OUTPUT name="media1_out" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="matrix.png" name="t_main_matrix">
+        <INPUT name="codec0_in" position="Continuous"/>
+        <INPUT name="codec1_in" position="Continuous"/>
+        <INPUT name="sprot_loop_in" position="Continuous"/>
+        <INPUT name="media_loop1_in" position="Continuous"/>
+        <INPUT name="media_loop2_in" position="Continuous"/>
+        <INPUT name="pcm0_in" position="Continuous"/>
+        <INPUT name="pcm1_in" position="Continuous"/>
+        <OUTPUT name="codec0_out" position="Continuous"/>
+        <OUTPUT name="codec1_out" position="Continuous"/>
+        <OUTPUT name="sprot_loop_out" position="Continuous"/>
+        <OUTPUT name="media_loop1_out" position="Continuous"/>
+        <OUTPUT name="media_loop2_out" position="Continuous"/>
+        <OUTPUT name="pcm1_out" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="codec_input.png" name="t_codec_input">
+        <OUTPUT name="out0" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="digital_core.png" name="t_digital_core">
+        <OUTPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+        <OUTPUT name="in2" position="Continuous"/>
+        <OUTPUT name="out2" position="Continuous"/>
+        <OUTPUT name="in3" position="Continuous"/>
+        <OUTPUT name="out3" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <SUBSYSTEM_TYPE image="codec_output.png" name="t_codec_output">
+        <OUTPUT name="in0" position="Continuous"/>
+    </SUBSYSTEM_TYPE>
+    <UI_ELEM_TYPE image="adc.png" name="t_adc">
+        <OUTPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE image="dac.png" name="t_dac">
+        <OUTPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE image="aif.png" name="t_aif">
+        <OUTPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+        <OUTPUT name="in2" position="Continuous"/>
+        <OUTPUT name="in3" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE image="input.png" name="t_mic">
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE image="speaker.png" name="t_spk"/>
+    <UI_ELEM_TYPE name="t_ui_0_in_0_out"/>
+    <UI_ELEM_TYPE name="t_ui_0_in_1_out">
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE name="t_ui_1_in_0_out">
+        <INPUT name="in0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE name="t_ui_1_in_1_out">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE name="t_ui_2_in_2_out">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <UI_ELEM_TYPE image="mixer.png" name="mixer">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </UI_ELEM_TYPE>
+    <MODULE_TYPE uuid="gain.v1.0.0001" image="gain.png" name="t_gain">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="dcr.v1.1.0001" image="equalizer.png" name="t_dcr">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="fir.v1.1.0001" image="equalizer.png" name="t_fir">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="iir.v1.1.0001" image="equalizer.png" name="t_iir">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="mdrc.v1.0.0001" image="mdrc.png" name="t_mdrc">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="mdrp.v1.0.0001" image="mdrp.png" name="t_mdrp">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="lpro.v1.0.0001" image="lpro.png" name="t_lpro">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="itlv.v1.0.0001" image="./JPG/interleaver.jpg" name="t_interleaver">
+        <INPUT name="in0" position="Continuous"/>
+        <INPUT name="in1" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="dtlv.v1.0.0001" image="./JPG/deinterleaver.jpg" name="t_deinterleaver">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+        <OUTPUT name="out1" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="switch.v1.0.0001" image="switch.png" name="t_switch">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+    <MODULE_TYPE uuid="adc.volume.v1.0.0001" image="adc.png" name="t_adc_volume">
+        <INPUT name="in0" position="Continuous"/>
+        <OUTPUT name="out0" position="Continuous"/>
+    </MODULE_TYPE>
+</LAYOUT_TYPES>

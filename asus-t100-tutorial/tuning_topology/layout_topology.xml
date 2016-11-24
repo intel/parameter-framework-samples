@@ -34,7 +34,7 @@
         </SUBSYSTEM>
         <SUBSYSTEM description="PCM0 playback" name="pcm0_in" path="/Audio/sst/pipe/pcm0_in" type="t_subsyst_0_in_1_out">
             <UI_ELEM name="pcm0_pipe_in" type="t_ui_0_in_1_out"/>
-            <MODULE name="pcm0_gain" orientation="WEST" path="/Audio/sst/pipe/pcm0/gain" type="t_gain"/>
+            <MODULE name="pcm0_gain" orientation="WEST" path="/Audio/sst/pipe/pcm0_in/gain" type="t_gain"/>
             <UI_ELEM name="pcm0_pipe_out" type="t_ui_1_in_0_out"/>
             <LINK name="">
                 <FROM module="pcm0_pipe_in" output="out0"/>
@@ -159,10 +159,10 @@
             </LINK>
         </SUBSYSTEM>
         <SUBSYSTEM description="Media switch matrix" name="media_matrix" path="/Audio/sst/media_mixer" type="t_media_matrix">
-            <UI_ELEM name="media_matrix TO BE IMPLEMENTED" type="mixer"/>
+            <UI_ELEM name="media_matrix" type="mixer"/>
         </SUBSYSTEM>
         <SUBSYSTEM description="Main switch matrix" name="main_matrix" path="/Audio/sst/main_mixer" type="t_main_matrix">
-            <UI_ELEM name="main_matrix TO BE IMPLEMENTED" type="mixer"/>
+            <UI_ELEM name="main_matrix" type="mixer"/>
         </SUBSYSTEM>
         <LINK>
             <FROM module="pcm_regular" output="out0" position="LEFT"/>
@@ -225,9 +225,9 @@
         </LINK>
     </SUBSYSTEM>
     <SUBSYSTEM description="Audio analog hardware" name="realtek" path="/Audio/WM8958" type="t_wm8958">
-        <SUBSYSTEM name="inputs" path="/Audio/REALTEK/SOUND_CARD/INPUT/DIGITAL/STEREO/VOLUME" type="t_codec_input">
-            <MODULE name="input_in1_volume" path="/Audio/REALTEK/SOUND_CARD/INPUT/DIGITAL/STEREO/VOLUME/0/LEVEL" type="t_gain"/>
-            <MODULE name="input_in2_volume" path="/Audio/REALTEK/SOUND_CARD/INPUT/DIGITAL/STEREO/VOLUME/1/LEVEL" type="t_gain"/>
+        <SUBSYSTEM name="inputs" path="/Audio/codec/rt5640/input/digital/stereo/volume" type="t_codec_input">
+            <MODULE name="input_in1_volume" path="/Audio/codec/rt5640/input/digital/stereo/volume/0/level" type="t_gain"/>
+            <MODULE name="input_in2_volume" path="/Audio/codec/rt5640/input/digital/stereo/volume/1/level" type="t_gain"/>
             <UI_ELEM name="input_in1" type="t_subsyst_0_in_1_out"/>
             <UI_ELEM name="input_in2" type="t_subsyst_0_in_1_out"/>
             <UI_ELEM name="input_recmixl" type="mixer"/>
@@ -278,20 +278,20 @@
                 <TO module="input_mux_r" input="in0" position=""/>
             </LINK>
         </SUBSYSTEM>
-        <SUBSYSTEM name="digital_core" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL" type="t_digital_core">
+        <SUBSYSTEM name="digital_core" path="/Audio/codec/rt5640/output/digital" type="t_digital_core">
             <UI_ELEM name="digital_core_dac_1_l" type="t_dac"/>
             <UI_ELEM name="digital_core_adc_l" type="t_adc"/>
             <UI_ELEM name="digital_core_adc_r" type="t_adc"/>
-            <MODULE name="digital_core_dac_1_volume" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1" type="t_gain"/>
+            <MODULE name="digital_core_dac_1_volume" path="/Audio/codec/rt5640/output/digital/volume/dac1" type="t_gain"/>
             <UI_ELEM name="digital_core_dac_1_r" type="t_dac"/>
             <UI_ELEM name="digital_core_dac_2_l" type="t_dac"/>
             <UI_ELEM name="digital_core_dac_2_r" type="t_dac"/>
             <UI_ELEM name="digital_core_dac_2_volume" type="t_ui_1_in_1_out"/>
             <UI_ELEM name="digital_core_aif1" type="t_aif"/>
-            <MODULE name="digital_core_adc_stereo" path="/Audio/REALTEK/SOUND_CARD/INPUT/DIGITAL/STEREO" type="t_gain"/>
+            <MODULE name="digital_core_adc_stereo" path="/Audio/codec/rt5640/input/digital/stereo" type="t_gain"/>
             <UI_ELEM name="digital_core_dsp" type="mixer"/>
             <UI_ELEM name="digital_core_adc_mixers" type="mixer"/>
-            <MODULE name="digital_core_adc_mono" path="/Audio/REALTEK/SOUND_CARD/INPUT/DIGITAL/MONO" type="t_gain"/>
+            <MODULE name="digital_core_adc_mono" path="/Audio/codec/rt5640/input/digital/mono" type="t_gain"/>
             <LINK>
                 <FROM module="digital_core_dac_1_volume" output="out0"/>
                 <TO module="digital_core_dac_1_l" input="in0"/>
@@ -349,14 +349,14 @@
                 <TO module="digital_core_dac_2_volume" input="in0" position=""/>
             </LINK>
         </SUBSYSTEM>
-        <SUBSYSTEM name="outputs" path="/Audio/REALTEK/SOUND_CARD/OUTPUT" type="t_codec_output">
+        <SUBSYSTEM name="outputs" path="/Audio/codec/rt5640/output" type="t_codec_output">
             <UI_ELEM name="outputs_dac_1_left" type="t_dac"/>
             <UI_ELEM name="outputs_dac_2_left" type="t_dac"/>
             <UI_ELEM name="outputs_mixers" type="mixer"/>
-            <MODULE name="outputs_headphone" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME" type="t_gain"/>
-            <MODULE name="outputs_earpiece" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/EARPIECE/ANALOG" type="t_gain"/>
-            <MODULE name="outputs_speaker" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME" type="t_gain"/>
-            <MODULE name="outputs_lineout" path="/Audio/REALTEK/SOUND_CARD/OUTPUT/LINEOUT/ANALOG/VOLUME" type="t_gain"/>
+            <MODULE name="outputs_headphone" path="/Audio/codec/rt5640/output/headphone/analog/volume" type="t_gain"/>
+            <MODULE name="outputs_earpiece" path="/Audio/codec/rt5640/output/earpiece/analog" type="t_gain"/>
+            <MODULE name="outputs_speaker" path="/Audio/codec/rt5640/output/speaker/analog/volume" type="t_gain"/>
+            <MODULE name="outputs_lineout" path="/Audio/codec/rt5640/output/lineout/analog/volume" type="t_gain"/>
             <UI_ELEM name="outputs_dac_1_right" type="t_dac"/>
             <UI_ELEM name="outputs_dac_2_right" type="t_dac"/>
             <LINK name="">

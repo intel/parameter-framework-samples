@@ -1,7 +1,7 @@
 domain: HwCodec.Calibration
 	conf: Default
-		/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE = IF2_DAC_L
-		/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE = IF2_DAC_R
+		/Audio/codec/rt5640/mixer/voice_dsp/dacl2_source = IF2_DAC_L
+		/Audio/codec/rt5640/mixer/voice_dsp/dacr2_source = IF2_DAC_R
 
 ##############################
 #	 Mute & Unmute Steps
@@ -21,12 +21,12 @@ supDomain: Routing.Mute
 					ANY
 						OpenedPlaybackRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED = 0
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED = 0
+				/Audio/codec/rt5640/output/headphone/analog/volume/0/muted = 0
+				/Audio/codec/rt5640/output/headphone/analog/volume/1/muted = 0
 
 			conf: Mute
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED = 1
+				/Audio/codec/rt5640/output/headphone/analog/volume/0/muted = 1
+				/Audio/codec/rt5640/output/headphone/analog/volume/1/muted = 1
 
 ##############################
 #	 Configure Step
@@ -43,16 +43,16 @@ supDomain: Routing.Configure
 					ANY
 						OpenedPlaybackRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH = 1
+				/Audio/codec/rt5640/output/speaker/analog/switch_l = 1
+				/Audio/codec/rt5640/output/speaker/analog/switch_r = 1
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch = 1
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch = 1
 
 			conf: Unbind
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L = 0
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH = 0
+				/Audio/codec/rt5640/output/speaker/analog/switch_l = 0
+				/Audio/codec/rt5640/output/speaker/analog/switch_r = 0
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch = 0
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch = 0
 
 		domain: Multimedia.Ihf
 			conf: Bind
@@ -60,14 +60,14 @@ supDomain: Routing.Configure
 					SelectedOutputDevices Includes Ihf
 					OpenedPlaybackRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH = 1
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch = 1
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch = 1
+				/Audio/codec/rt5640/output/speaker/switch = 1
 			conf: Unbind
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH = 0
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch = 0
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch = 0
+				/Audio/codec/rt5640/output/speaker/switch = 0
 
 		domain: Headset
 			conf: Bind
@@ -78,14 +78,14 @@ supDomain: Routing.Configure
 						SelectedOutputDevices Includes Headset
 						SelectedOutputDevices Includes Headphones
 
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH = 1
+				/Audio/codec/rt5640/output/headphone/analog/switch_l = 1
+				/Audio/codec/rt5640/output/headphone/analog/switch_r = 1
+				/Audio/codec/rt5640/output/headphone/switch = 1
 
 			conf: Unbind
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R = 1
-				/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH = 0
+				/Audio/codec/rt5640/output/headphone/analog/switch_l = 1
+				/Audio/codec/rt5640/output/headphone/analog/switch_r = 1
+				/Audio/codec/rt5640/output/headphone/switch = 0
 
 		domain: Multimedia.Headset
 			conf: Bind
@@ -95,29 +95,29 @@ supDomain: Routing.Configure
 						SelectedOutputDevices Includes Headset
 						SelectedOutputDevices Includes Headphones
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH = 1
+				/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch = 1
 
 			conf: Unbind
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH = 0
+				/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch = 0
 
 		domain: Multimedia.Playback
 			conf: Bind
 				OpenedPlaybackRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH = 1
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch = 1
+				/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch = 1
+				/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch = 1
+				/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch = 1
 
 			conf: Unbind
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH = 0
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch = 0
+				/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch = 0
+				/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch = 0
+				/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch = 0
 
 	supDomain: HwCodec.Capture
 		domain: Capture sequenceAware
@@ -126,20 +126,20 @@ supDomain: Routing.Configure
 					SelectedInputDevices Includes Headset
 					OpenedCaptureRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH = 1
+				/Audio/codec/rt5640/mixer/analog/rec_mixer/right/bst/2/switch = 1
+				/Audio/codec/rt5640/mixer/analog/rec_mixer/left/bst/2/switch = 1
+				/Audio/codec/rt5640/input/headset/switch = 1
 
 		domain: AllMics
 			conf: Bind
 				ANY
 					OpenedCaptureRoutes Includes HwCodec0IA
 
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH = 1
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH = 1
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source = 1
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch = 1
 
 			conf: Unbind
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH = 0
-				/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH = 0
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source = 0
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch = 0

@@ -27,82 +27,82 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Multimedia.Ihf">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">165 165</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">165 165</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">130 130</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">130 130</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Multimedia.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">130 130</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">130 130</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Multimedia.Ihf.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">132 132</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">132 132</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -116,12 +116,12 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Multimedia.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN">
-          <IntegerParameter Name="BOOST_GAIN">1</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain">
+          <IntegerParameter Name="boost_gain">1</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>

@@ -27,82 +27,82 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Multimedia.Ihf">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">165 165</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">165 165</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">130 130</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">130 130</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Multimedia.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">130 130</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">130 130</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Multimedia.Ihf.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/BOOST">
-          <EnumParameter Name="BOOST">g-2x</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/DAC1">
-          <IntegerParameter Name="DAC1">132 132</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">132 132</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/LEVEL">
-          <IntegerParameter Name="LEVEL">31</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/DIGITAL/VOLUME/MONO_DAC">
-          <IntegerParameter Name="MONO_DAC">175 175</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -116,12 +116,12 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Multimedia.Headset">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/ANALOG/2/BOOST_GAIN">
-          <IntegerParameter Name="BOOST_GAIN">1</IntegerParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain">
+          <IntegerParameter Name="boost_gain">1</IntegerParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -776,16 +776,16 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/voice_dsp/dacl2_source"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/voice_dsp/dacr2_source"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Default">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACL2_SOURCE">
-          <EnumParameter Name="DACL2_SOURCE">IF2_DAC_L</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/voice_dsp/dacl2_source">
+          <EnumParameter Name="dacl2_source">IF2_DAC_L</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/VOICE_DSP/DACR2_SOURCE">
-          <EnumParameter Name="DACR2_SOURCE">IF2_DAC_R</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/voice_dsp/dacr2_source">
+          <EnumParameter Name="dacr2_source">IF2_DAC_R</EnumParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -813,24 +813,24 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/muted"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/muted"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Unmute">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED">
-          <BooleanParameter Name="MUTED">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/muted">
+          <BooleanParameter Name="muted">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED">
-          <BooleanParameter Name="MUTED">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/muted">
+          <BooleanParameter Name="muted">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Mute">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/0/MUTED">
-          <BooleanParameter Name="MUTED">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/muted">
+          <BooleanParameter Name="muted">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/VOLUME/1/MUTED">
-          <BooleanParameter Name="MUTED">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/muted">
+          <BooleanParameter Name="muted">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -855,38 +855,38 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_l"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_r"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L">
-          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_l">
+          <BooleanParameter Name="switch_l">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
-          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_r">
+          <BooleanParameter Name="switch_r">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_L">
-          <BooleanParameter Name="SWITCH_L">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_l">
+          <BooleanParameter Name="switch_l">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/ANALOG/SWITCH_R">
-          <BooleanParameter Name="SWITCH_R">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/switch_r">
+          <BooleanParameter Name="switch_r">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/LEFT/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPOUT_MIXER/LEFT/SPKVOL/RIGHT/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -909,31 +909,31 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/RIGHT/DAC/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/SPEAKER_MIXER/LEFT/DAC/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/SPEAKER/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -961,31 +961,31 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_l"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_r"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L">
-          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_l">
+          <BooleanParameter Name="switch_l">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R">
-          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_r">
+          <BooleanParameter Name="switch_r">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_L">
-          <BooleanParameter Name="SWITCH_L">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_l">
+          <BooleanParameter Name="switch_l">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/ANALOG/SWITCH_R">
-          <BooleanParameter Name="SWITCH_R">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/switch_r">
+          <BooleanParameter Name="switch_r">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/OUTPUT/HEADPHONE/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -1011,17 +1011,17 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/HPOUT_MIXER/DAC1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -1041,52 +1041,52 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH">
-          <BooleanParameter Name="INF1_SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch">
+          <BooleanParameter Name="inf1_switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH">
-          <BooleanParameter Name="INF1_SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch">
+          <BooleanParameter Name="inf1_switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/RIGHT/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/DAC_MIXER/STEREO/LEFT/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/LEFT/INF1_SWITCH">
-          <BooleanParameter Name="INF1_SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch">
+          <BooleanParameter Name="inf1_switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/INF/RIGHT/INF1_SWITCH">
-          <BooleanParameter Name="INF1_SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch">
+          <BooleanParameter Name="inf1_switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/LEFT/DAC/L1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/OUTPUT_MIXER/RIGHT/DAC/R1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -1104,20 +1104,20 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/rec_mixer/right/bst/2/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/rec_mixer/left/bst/2/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/input/headset/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Analog">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/RIGHT/BST/2/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/rec_mixer/right/bst/2/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/ANALOG/REC_MIXER/LEFT/BST/2/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/analog/rec_mixer/left/bst/2/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/INPUT/HEADSET/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/input/headset/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>
@@ -1139,31 +1139,31 @@
       </Configuration>
     </Configurations>
     <ConfigurableElements>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH"/>
-      <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch"/>
     </ConfigurableElements>
     <Settings>
       <Configuration Name="Bind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE">
-          <EnumParameter Name="SOURCE">ADC</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source">
+          <EnumParameter Name="source">ADC</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH">
-          <BooleanParameter Name="SWITCH">1</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch">
+          <BooleanParameter Name="switch">1</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
       <Configuration Name="Unbind">
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SOURCE">
-          <EnumParameter Name="SOURCE">DAC MIX</EnumParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source">
+          <EnumParameter Name="source">DAC MIX</EnumParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/RIGHT/STEREO/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
-        <ConfigurableElement Path="/Audio/REALTEK/SOUND_CARD/MIXER/DIGITAL/ADC_MIXER/LEFT/STEREO/1/SWITCH">
-          <BooleanParameter Name="SWITCH">0</BooleanParameter>
+        <ConfigurableElement Path="/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch">
+          <BooleanParameter Name="switch">0</BooleanParameter>
         </ConfigurableElement>
       </Configuration>
     </Settings>

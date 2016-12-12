@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LAYOUT_UI>
+    <MODULE_LAYOUT name="realtek" label="REALTEK 5640" left="3" top="38" width="55" height="10"/>
+    <MODULE_LAYOUT name="sst" label="" left="3" top="21" width="55" height="10"/>
+    <MODULE_LAYOUT name="codec_in" label="CODEC IN" left="4" top="3" width="15" height="5"/>
+    <MODULE_LAYOUT name="codec_out" label="CODEC OUT" left="4" top="9" width="15" height="5"/>
+    <MODULE_LAYOUT name="codec_amic_in" label="CODEC AMIC IN" left="6" top="45" width="15" height="5"/>
+    <MODULE_LAYOUT name="codec_hs_out" label="CODEC HS OUT" left="6" top="37" width="15" height="5"/>
+    <MODULE_LAYOUT name="media_spk_prot" label="SPK PROT LOOP" left="4" top="27" width="15" height="11"/>
+    <MODULE_LAYOUT name="media_spk_eq" label="SPEAKER EQ LOOP" left="4" top="15" width="15" height="11"/>
+    <MODULE_LAYOUT name="media_mic_eq" label="MIC EQ LOOP" left="4" top="39" width="15" height="11"/>
+    <MODULE_LAYOUT name="pcm1_out" label="PCM1 OUT" left="39" top="12" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm_regular" label="PCM REGULAR IN" left="74" top="32" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm0_in" label="PCM0 IN" left="39" top="24" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm1_in" label="PCM1 IN" left="40" top="40" width="15" height="5"/>
+    <MODULE_LAYOUT name="main_matrix" label="MAIN MATRIX" left="24" top="2" width="10" height="49"/>
+    <MODULE_LAYOUT name="media_matrix" label="MEDIA MATRIX" left="59" top="19" width="10" height="31"/>
+    <MODULE_LAYOUT name="codec0_in_ssp_in" label="DMICS SSP IN" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_in_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_in_dcr" label="DCR" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_in_pipe_out" label="PIPE OUT" left="55" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_out_pipe_in" label="PIPE IN" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_out_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec0_out_ssp_out" label="IHF-EP SSP OUT" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_in_ssp_in" label="AMIC SSP IN" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_in_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_in_dcr" label="" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_in_pipe_out" label="PIPE OUT" left="55" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_out_pipe_in" label="PIPE IN" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_out_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="codec1_out_ssp_out" label="HS SSP OUT" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_reg_pipe_in" label="PCM REG IN" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_reg_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_reg_pipe_out" label="PIPE OUT" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_pcm1_pipe_in" label="PCM1 PIPE IN" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_pipe_out" label="PCM RECORD OUT" left="40" top="12" width="13" height="10"/>
+    <MODULE_LAYOUT name="pcm0_pipe_in" label="PCM0 PIPE IN" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm0_gain" label="PCM0 GAIN" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm0_pipe_out" label="PCM0 PIPE OUT" left="40" top="12" width="13" height="10"/>
+    <MODULE_LAYOUT name="pcm1_pipe_in" label="PCM1 PIPE IN" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm1_gain" label="PCM1 GAIN" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm1_pipe_out" label="PCM1 PIPE OUT" left="40" top="12" width="13" height="10"/>
+    <MODULE_LAYOUT name="spk_prot_pipe_in" label="PIPE IN" left="40" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_prot_gain" label="" left="22" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_prot_lpro" label="LPRO" left="22" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_prot_pipe_out" label="PIPE OUT" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_pipe_in" label="PIPE IN" left="40" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_iir" label="IIR" left="25" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_fir" label="FIR" left="10" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_mdrc" label="" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="spk_eq_pipe_out" label="PIPE OUT" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_pipe_in" label="PIPE IN" left="40" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_iir" label="IIR" left="25" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_fir" label="FIR" left="10" top="28" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_mdrc" label="" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="mic_eq_pipe_out" label="PIPE OUT" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="inputs" label="INPUTS" left="5" top="5" width="10" height="22"/>
+    <MODULE_LAYOUT name="digital_core" label="DIGITAL CORE" left="17" top="5" width="37" height="22"/>
+    <MODULE_LAYOUT name="outputs" label="OUTPUTS" left="56" top="5" width="10" height="22"/>
+    <MODULE_LAYOUT name="aif1" label="AIF1" left="21" top="31" width="12" height="10"/>
+    <MODULE_LAYOUT name="aif1" label="AIF1" left="19" top="30" width="18" height="10"/>
+    <MODULE_LAYOUT name="aif2" label="AIF2" left="36" top="31" width="18" height="10"/>
+    <MODULE_LAYOUT name="input_in1_volume" label="IN1 VOLUME" left="20" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_in2_volume" label="IN2 VOLUME" left="20" top="33" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_in1" label="IN1" left="5" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_in2" label="IN2" left="5" top="33" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_recmixl" label="RECMIXL" left="36" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_recmixr" label="RECMIXR" left="36" top="33" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_adc_l" label="ADC_L" left="67" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_adc_r" label="ADC_R" left="67" top="33" width="10" height="10"/>
+    <MODULE_LAYOUT name="inputs_mic_1_l" label="MIC 1 L" left="5" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="inputs_mic_1_r" label="MIC 1 R" left="5" top="38" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_1_left" label="DAC 1 Left" left="4" top="2" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_R1" label="DAC R1" left="4" top="16" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_2_left" label="DAC 2 Left" left="4" top="27" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_R2" label="DAC R2" left="4" top="40" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_mixers" label="OUTPUT MIXERS" left="24" top="1" width="12" height="51"/>
+    <MODULE_LAYOUT name="outputs_headphone" label="HEADPHONE" left="46" top="2" width="11" height="10"/>
+    <MODULE_LAYOUT name="outputs_earpiece" label="EARPIECE" left="46" top="15" width="11" height="10"/>
+    <MODULE_LAYOUT name="outputs_speaker_mixer_volume" label="SPEAKER MIXER" left="54" top="38" width="11" height="10"/>
+    <MODULE_LAYOUT name="outputs_speaker" label="SPEAKER" left="46" top="27" width="11" height="10"/>
+    <MODULE_LAYOUT name="outputs_speaker_boost" label="SPEAKER BOOST" left="70" top="38" width="11" height="10"/>
+    <MODULE_LAYOUT name="digital_core_dac_1_l" label="DAC 1 L" left="91" top="2" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_adc_l" label="ADC L" left="3" top="4" width="8" height="18"/>
+    <MODULE_LAYOUT name="digital_core_adc_r" label="ADC R" left="3" top="26" width="8" height="18"/>
+    <MODULE_LAYOUT name="digital_core_dac_1_volume" label="DAC_1_VOLUME" left="68" top="2" width="13" height="22"/>
+    <MODULE_LAYOUT name="digital_core_dac_1_r" label="DAC 1 R" left="91" top="13" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_dac_2_l" label="DAC 2 L" left="91" top="25" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_dac_2_r" label="DAC 2 R" left="91" top="35" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_dac_2_volume" label="DAC_2_VOLUME" left="68" top="25" width="13" height="20"/>
+    <MODULE_LAYOUT name="digital_core_aif1" label="DIGITAL AUDIO INTERFACE" left="43" top="49" width="19" height="7"/>
+    <MODULE_LAYOUT name="digital_core_dmic_1" label="DIGITAL MIC 1" left="54" top="0" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_dmic_2" label="DIGITAL MIC 2" left="66" top="0" width="10" height="10"/>
+    <MODULE_LAYOUT name="aif1_adc_R" label="ADC R" left="5" top="2" width="20" height="10"/>
+    <MODULE_LAYOUT name="aif1_adc_L" label="ADC L" left="30" top="2" width="20" height="10"/>
+    <MODULE_LAYOUT name="aif1_dacs" label="DACS" left="53" top="2" width="37" height="10"/>
+    <MODULE_LAYOUT name="aif1_adc1_L_enabled" label="Switch L" left="6" top="16" width="8" height="8"/>
+    <MODULE_LAYOUT name="aif1_adc1_R_enabled" label="Switch R" left="16" top="16" width="8" height="8"/>
+    <MODULE_LAYOUT name="aif1_adc2_L_enabled" label="Switch L" left="31" top="16" width="8" height="8"/>
+    <MODULE_LAYOUT name="aif1_adc2_R_enabled" label="Switch R" left="41" top="16" width="8" height="8"/>
+    <MODULE_LAYOUT name="aif1_drc1" label="DRC 1" left="5" top="28" width="20" height="7"/>
+    <MODULE_LAYOUT name="aif1_drc2" label="DRC 2" left="30" top="28" width="20" height="7"/>
+    <MODULE_LAYOUT name="aif1_aif1_input" label="AIF1" left="2" top="43" width="51" height="10"/>
+    <MODULE_LAYOUT name="aif1_aif1_output" label="   " left="53" top="43" width="37" height="10"/>
+    <MODULE_LAYOUT name="media_pcm" label="Media PCM" left="13" top="17" width="34" height="4"/>
+    <MODULE_LAYOUT name="primary_hal" label="Primary Audio HAL" left="8" top="1" width="44" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_pcm3_pipe_in" label="PCM3 PIPE IN" left="10" top="40" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_mic_1_2_gain" label="" left="24" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_mic_3_4_gain" label="" left="24" top="40" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_mic_1_2_eq" label="" left="38" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_rec_mic_3_4_eq" label="" left="38" top="40" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_1_gain" label="DAC 1 GAIN" left="20" top="10" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_2_gain" label="DAC 2 GAIN" left="20" top="34" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_lineout" label="LINEOUT" left="46" top="40" width="11" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_1_right" label="DAC 1 Right" left="4" top="15" width="10" height="10"/>
+    <MODULE_LAYOUT name="outputs_dac_2_right" label="DAC 2 Right" left="4" top="40" width="10" height="10"/>
+    <MODULE_LAYOUT name="digital_core_adc_stereo" label="ADC STEREO" left="29" top="9" width="10" height="9"/>
+    <MODULE_LAYOUT name="digital_core_dsp" label="DSP" left="44" top="2" width="16" height="45"/>
+    <MODULE_LAYOUT name="digital_core_adc_mixers" label="mixer" left="14" top="2" width="9" height="44"/>
+    <MODULE_LAYOUT name="digital_core_adc_mono" label="ADC MONO" left="29" top="31" width="10" height="9"/>
+    <MODULE_LAYOUT name="inputs_dmics" label="DMIC 1/2" left="5" top="19" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_mux_l" label="MUX" left="52" top="4" width="10" height="10"/>
+    <MODULE_LAYOUT name="input_mux_r" label="MUX" left="52" top="33" width="10" height="10"/>
+    <MODULE_LAYOUT name="aif1" label="AIF1" left="17" top="31" width="18" height="10"/>
+</LAYOUT_UI>

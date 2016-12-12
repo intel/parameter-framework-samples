@@ -1,0 +1,145 @@
+domain: HwCodec.Calibration
+	conf: Default
+		/Audio/codec/rt5640/mixer/voice_dsp/dacl2_source = IF2_DAC_L
+		/Audio/codec/rt5640/mixer/voice_dsp/dacr2_source = IF2_DAC_R
+
+##############################
+#	 Mute & Unmute Steps
+##############################
+
+supDomain: Routing.Mute
+	# Definition of Mute and Unmute for futur use in this supDomain
+	RoutageState Includes Flow
+
+	supDomain: HwCodec.Playback
+		domain: Headset
+			conf: Unmute
+				ALL
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/output/headphone/analog/volume/0/muted = 0
+				/Audio/codec/rt5640/output/headphone/analog/volume/1/muted = 0
+
+			conf: Mute
+				/Audio/codec/rt5640/output/headphone/analog/volume/0/muted = 1
+				/Audio/codec/rt5640/output/headphone/analog/volume/1/muted = 1
+
+##############################
+#	 Configure Step
+##############################
+
+supDomain: Routing.Configure
+	RoutageState Includes Configure
+
+	supDomain: HwCodec.Playback
+		domain: Ihf
+			conf: Bind
+				ALL
+					SelectedOutputDevices Includes Ihf
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/output/speaker/analog/switch_l = 1
+				/Audio/codec/rt5640/output/speaker/analog/switch_r = 1
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch = 1
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch = 1
+
+			conf: Unbind
+				/Audio/codec/rt5640/output/speaker/analog/switch_l = 0
+				/Audio/codec/rt5640/output/speaker/analog/switch_r = 0
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/left/switch = 0
+				/Audio/codec/rt5640/mixer/analog/spout_mixer/left/spkvol/right/switch = 0
+
+		domain: Multimedia.Ihf
+			conf: Bind
+				ALL
+					SelectedOutputDevices Includes Ihf
+					OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch = 1
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch = 1
+				/Audio/codec/rt5640/output/speaker/switch = 1
+			conf: Unbind
+
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/right/dac/1/switch = 0
+				/Audio/codec/rt5640/mixer/analog/speaker_mixer/left/dac/1/switch = 0
+				/Audio/codec/rt5640/output/speaker/switch = 0
+
+		domain: Headset
+			conf: Bind
+				ALL
+					ANY
+						OpenedPlaybackRoutes Includes HwCodec0IA
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+
+				/Audio/codec/rt5640/output/headphone/analog/switch_l = 1
+				/Audio/codec/rt5640/output/headphone/analog/switch_r = 1
+				/Audio/codec/rt5640/output/headphone/switch = 1
+
+			conf: Unbind
+				/Audio/codec/rt5640/output/headphone/analog/switch_l = 1
+				/Audio/codec/rt5640/output/headphone/analog/switch_r = 1
+				/Audio/codec/rt5640/output/headphone/switch = 0
+
+		domain: Multimedia.Headset
+			conf: Bind
+				ALL
+					OpenedPlaybackRoutes Includes HwCodec0IA
+					ANY
+						SelectedOutputDevices Includes Headset
+						SelectedOutputDevices Includes Headphones
+
+				/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch = 1
+
+			conf: Unbind
+				/Audio/codec/rt5640/mixer/analog/hpout_mixer/dac1/switch = 0
+
+		domain: Multimedia.Playback
+			conf: Bind
+				OpenedPlaybackRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch = 1
+				/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch = 1
+				/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch = 1
+				/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch = 1
+
+			conf: Unbind
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/right/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/dac_mixer/stereo/left/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/inf/left/inf1_switch = 0
+				/Audio/codec/rt5640/mixer/digital/inf/right/inf1_switch = 0
+				/Audio/codec/rt5640/mixer/analog/output_mixer/left/dac/l1/switch = 0
+				/Audio/codec/rt5640/mixer/analog/output_mixer/right/dac/r1/switch = 0
+
+	supDomain: HwCodec.Capture
+		domain: Capture sequenceAware
+			conf: Analog
+				ALL
+					SelectedInputDevices Includes Headset
+					OpenedCaptureRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/mixer/analog/rec_mixer/right/bst/2/switch = 1
+				/Audio/codec/rt5640/mixer/analog/rec_mixer/left/bst/2/switch = 1
+				/Audio/codec/rt5640/input/headset/switch = 1
+
+		domain: AllMics
+			conf: Bind
+				ANY
+					OpenedCaptureRoutes Includes HwCodec0IA
+
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source = 1
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch = 1
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch = 1
+
+			conf: Unbind
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/source = 0
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/right/stereo/1/switch = 0
+				/Audio/codec/rt5640/mixer/digital/adc_mixer/left/stereo/1/switch = 0

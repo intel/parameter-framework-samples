@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentTypeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../Schemas/ComponentTypeSet.xsd">
+    <!-- needs Gain.xml, SbaIir.xml, SbaFir.xml and Mdrc.xml to be included too -->
+    <ComponentType Name="SstIir">
+        <IntegerParameter Name="length" Size="16"/>
+        <Component Name="algo" Type="SbaIir"/>
+    </ComponentType>
+    <ComponentType Name="SstFir">
+        <IntegerParameter Name="length" Size="16"/>
+        <Component Name="algo" Type="SbaFir"/>
+    </ComponentType>
+    <ComponentType Name="SstMdrc">
+        <IntegerParameter Name="length" Size="16"/>
+        <Component Name="algo" Type="Mdrc"/>
+    </ComponentType>
+
+    <ComponentType Name="EqPipe" Extends="GainPipe">
+        <ParameterBlock Name="equalizer">
+            <Component Name="fir" Type="SstFir" Mapping="Control:%1 fir 0 params"/>
+            <Component Name="iir" Type="SstIir" Mapping="Control:%1 iir 0 params"/>
+        </ParameterBlock>
+    </ComponentType>
+
+    <ComponentType Name="MediaEqPipe" Extends="EqPipe">
+        <Component Name="mdrc" Type="SstMdrc" Mapping="Control:%1 mdrp 0 params"/>
+    </ComponentType>
+
+    <ComponentType Name="EqSinkPipe" Extends="EqPipe">
+        <BooleanParameter Name="switch" Mapping="Control:%1 %4 0 switch"/>
+    </ComponentType>
+</ComponentTypeSet>
+

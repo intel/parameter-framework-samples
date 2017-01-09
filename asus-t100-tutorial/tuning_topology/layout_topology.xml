@@ -71,6 +71,19 @@
                 <TO module="pcm_reg_pipe_out" input="in0"/>
             </LINK>
         </SUBSYSTEM>
+        <SUBSYSTEM description="Deep playback" name="pcm_deep" path="/Audio/sst/pipe/pcm_deep" type="t_subsyst_0_in_1_out">
+            <UI_ELEM name="pcm_deep_pipe_in" type="t_ui_0_in_1_out"/>
+            <MODULE name="pcm_deep_gain" orientation="WEST" path="/Audio/sst/pipe/pcm_deep/gain" type="t_gain"/>
+            <UI_ELEM name="pcm_deep_pipe_out" type="t_ui_1_in_0_out"/>
+            <LINK name="">
+                <FROM module="pcm_deep_pipe_in" output="out0"/>
+                <TO module="pcm_deep_gain" input="in0"/>
+            </LINK>
+            <LINK name="">
+                <FROM module="pcm_deep_gain" output="out0"/>
+                <TO module="pcm_deep_pipe_out" input="in0"/>
+            </LINK>
+        </SUBSYSTEM>
         <SUBSYSTEM description="Record" name="pcm1_out" path="/Audio/sst/pipe/pcm1_out" type="t_subsyst_1_in_0_out">
             <UI_ELEM name="pcm_rec_pcm1_pipe_in" type="t_ui_0_in_1_out"/>
             <UI_ELEM name="pcm_rec_pipe_out" type="t_ui_1_in_0_out"/>
@@ -166,6 +179,10 @@
         </SUBSYSTEM>
         <LINK>
             <FROM module="pcm_regular" output="out0" position="LEFT"/>
+            <TO module="media_matrix" input="media1_in" position="RIGHT"/>
+        </LINK>
+        <LINK>
+            <FROM module="pcm_deep" output="out0" position="LEFT"/>
             <TO module="media_matrix" input="media1_in" position="RIGHT"/>
         </LINK>
         <LINK>
@@ -423,6 +440,7 @@
         </LINK>
     </SUBSYSTEM>
     <UI_ELEM name="media_pcm" type="t_ui_0_in_1_out"/>
+    <UI_ELEM name="deep_pcm" type="t_ui_0_in_1_out"/>
     <UI_ELEM name="primary_hal" type="t_ui_2_in_2_out"/>
     <LINK name="Playback">
         <FROM module="sst" output="ssp0_out"/>
@@ -445,5 +463,9 @@
     <LINK name="Playback">
         <FROM module="primary_hal" output="out1"/>
         <TO module="media_pcm" input="in0" position="UP"/>
+    </LINK>
+    <LINK name="Deep Playback">
+        <FROM module="primary_hal" output="out1"/>
+        <TO module="deep_pcm" input="in0" position="UP"/>
     </LINK>
 </SUBSYSTEM>

@@ -69,7 +69,7 @@
         <ParameterBlock Name="pipe">
             <!--Component Name="pcm_compressed" Type="GainPipe" Mapping="Amend1:media0_in"/-->
             <Component Name="pcm_regular" Type="GainPipe" Mapping="Amend1:media1_in"/>
-            <!--Component Name="pcm_deep" Type="GainPipe" Mapping="Amend1:media3_in"/-->
+            <Component Name="pcm_deep" Type="GainPipe" Mapping="Amend1:media3_in"/>
             <Component Name="pcm0_in" Type="GainPipe" Mapping="Amend1:pcm0_in"/>
             <Component Name="pcm1_out" Type="GainPipe" Mapping="Amend1:pcm1_out"/>
             <!-- On bytcr-rt56xx-common, there is no TDM between the SST and the Codec, so we can only use codec0 -->

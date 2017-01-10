@@ -39,17 +39,25 @@ domainGroup: Routing.Sst
 					conf: Unmute
 						OpenedPlaybackRoutes Includes Media
 						/Audio/sst/pipe/pcm_regular/gain/switch = 1
-						/Audio/sst/pipe/pcm0_in/gain/switch = 1
 					conf: Mute
 						/Audio/sst/pipe/pcm_regular/gain/switch = 0
-						/Audio/sst/pipe/pcm0_in/gain/switch = 0
 
-#				domain: Deep
-#					conf: Unmute
-#						OpenedPlaybackRoutes Includes DeepMedia
-#						/Audio/sst/pipe/pcm_deep/gain/switch = 1
-#					conf: Mute
-#						/Audio/sst/pipe/pcm_deep/gain/switch = 0
+				domain: Deep
+					conf: Unmute
+						OpenedPlaybackRoutes Includes DeepMedia
+						/Audio/sst/pipe/pcm_deep/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/pcm_deep/gain/switch = 0
+
+				domain: SbaSwm
+					conf: Unmute
+#						Both Regular and Deep are mixed inside Media switch matrix
+						ANY
+							OpenedPlaybackRoutes Includes Media
+							OpenedPlaybackRoutes Includes DeepMedia
+						/Audio/sst/pipe/pcm0_in/gain/switch = 1
+					conf: Mute
+						/Audio/sst/pipe/pcm0_in/gain/switch = 0
 
 			domainGroup: Capture
 
@@ -105,7 +113,7 @@ domainGroup: Routing.Sst
 				confType: Bind
 					ANY
 						OpenedPlaybackRoutes Includes Media
-#						OpenedPlaybackRoutes Includes DeepMedia
+						OpenedPlaybackRoutes Includes DeepMedia
 
 				domain: Internal
 					conf: Bind

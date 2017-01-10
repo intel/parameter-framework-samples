@@ -155,6 +155,7 @@
     </Configurations>
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level"/>
       <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level"/>
       <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level"/>
       <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level"/>
@@ -162,6 +163,9 @@
     <Settings>
       <Configuration Name="Multimedia.Ihf">
         <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
           <IntegerParameter Name="level">0 0</IntegerParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
@@ -178,6 +182,9 @@
         <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
           <IntegerParameter Name="level">0 0</IntegerParameter>
         </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
         <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
           <IntegerParameter Name="level">0 0</IntegerParameter>
         </ConfigurableElement>
@@ -187,6 +194,9 @@
       </Configuration>
       <Configuration Name="Multimedia.Ihf.Headset">
         <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
           <IntegerParameter Name="level">0 0</IntegerParameter>
         </ConfigurableElement>
         <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">

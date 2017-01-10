@@ -9,10 +9,11 @@
     <MODULE_LAYOUT name="media_spk_prot" label="SPK PROT LOOP" left="4" top="27" width="15" height="11"/>
     <MODULE_LAYOUT name="media_spk_eq" label="SPEAKER EQ LOOP" left="4" top="15" width="15" height="11"/>
     <MODULE_LAYOUT name="media_mic_eq" label="MIC EQ LOOP" left="4" top="39" width="15" height="11"/>
-    <MODULE_LAYOUT name="pcm1_out" label="PCM1 OUT" left="39" top="12" width="15" height="5"/>
-    <MODULE_LAYOUT name="pcm_regular" label="PCM REGULAR IN" left="74" top="32" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm1_out" label="PCM1 OUT" left="74" top="8" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm_regular" label="PCM REGULAR IN" left="74" top="40" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm_deep" label="PCM DEEP IN" left="74" top="24" width="15" height="5"/>
     <MODULE_LAYOUT name="pcm0_in" label="PCM0 IN" left="39" top="24" width="15" height="5"/>
-    <MODULE_LAYOUT name="pcm1_in" label="PCM1 IN" left="40" top="40" width="15" height="5"/>
+    <MODULE_LAYOUT name="pcm1_in" label="PCM1 IN" left="39" top="40" width="15" height="5"/>
     <MODULE_LAYOUT name="main_matrix" label="MAIN MATRIX" left="24" top="2" width="10" height="49"/>
     <MODULE_LAYOUT name="media_matrix" label="MEDIA MATRIX" left="59" top="19" width="10" height="31"/>
     <MODULE_LAYOUT name="codec0_in_ssp_in" label="DMICS SSP IN" left="10" top="12" width="10" height="10"/>
@@ -32,6 +33,9 @@
     <MODULE_LAYOUT name="pcm_reg_pipe_in" label="PCM REG IN" left="40" top="12" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_reg_gain" label="" left="25" top="12" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_reg_pipe_out" label="PIPE OUT" left="10" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_deep_pipe_in" label="PCM DEEP IN" left="40" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_deep_gain" label="" left="25" top="12" width="10" height="10"/>
+    <MODULE_LAYOUT name="pcm_deep_pipe_out" label="PIPE OUT" left="10" top="12" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_rec_pcm1_pipe_in" label="PCM1 PIPE IN" left="10" top="12" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_rec_gain" label="" left="25" top="12" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_rec_pipe_out" label="PCM RECORD OUT" left="40" top="12" width="13" height="10"/>
@@ -105,7 +109,8 @@
     <MODULE_LAYOUT name="aif1_drc2" label="DRC 2" left="30" top="28" width="20" height="7"/>
     <MODULE_LAYOUT name="aif1_aif1_input" label="AIF1" left="2" top="43" width="51" height="10"/>
     <MODULE_LAYOUT name="aif1_aif1_output" label="   " left="53" top="43" width="37" height="10"/>
-    <MODULE_LAYOUT name="media_pcm" label="Media PCM" left="13" top="17" width="34" height="4"/>
+    <MODULE_LAYOUT name="media_pcm" label="Media PCM" left="22" top="17" width="30" height="4"/>
+    <MODULE_LAYOUT name="deep_pcm" label="Deep PCM" left="10" top="17" width="10" height="4"/>
     <MODULE_LAYOUT name="primary_hal" label="Primary Audio HAL" left="8" top="1" width="44" height="10"/>
     <MODULE_LAYOUT name="pcm_rec_pcm3_pipe_in" label="PCM3 PIPE IN" left="10" top="40" width="10" height="10"/>
     <MODULE_LAYOUT name="pcm_rec_mic_1_2_gain" label="" left="24" top="12" width="10" height="10"/>

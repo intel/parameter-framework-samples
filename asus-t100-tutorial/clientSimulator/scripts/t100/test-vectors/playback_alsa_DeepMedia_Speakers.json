@@ -1,0 +1,13 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedOutputDevices":"Ihf",
+         "OpenedPlaybackRoutes":"DeepMedia HwCodec0IA"
+        }
+    },
+    {"enable":{}},
+    {"script":"playDeep"},
+    {"unmute":{}}
+]

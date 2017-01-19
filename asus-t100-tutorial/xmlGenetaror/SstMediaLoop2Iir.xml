@@ -1,0 +1,134 @@
+  <ConfigurableDomain Name="Sst.MediaLoop2.Equalizer.iir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop2/equalizer/iir/algo">
+          <Component Name="algo">
+            <Component Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </Component>
+            <Component Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </Component>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_sections">2</IntegerParameter>
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <ParameterBlock Name="section">
+                  <ParameterBlock Name="0">
+                    <FixedPointParameter Name="a2">-0.45387792587280273437500</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.95257067680358886718750</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.38129699230194091796875</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.76259398460388183593750</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.38129699230194091796875</FixedPointParameter>
+                    <IntegerParameter Name="gain">256</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="1">
+                    <FixedPointParameter Name="a2">-0.48036515712738037109375</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.97902154922485351562500</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.30614829063415527343750</FixedPointParameter>
+                    <FixedPointParameter Name="b1">-0.61229658126831054687500</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.30614829063415527343750</FixedPointParameter>
+                    <IntegerParameter Name="gain">512</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="2">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="3">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="4">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                  <ParameterBlock Name="5">
+                    <FixedPointParameter Name="a2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="a1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b2">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b1">0.00000000000000000000000</FixedPointParameter>
+                    <FixedPointParameter Name="b0">0.00000000000000000000000</FixedPointParameter>
+                    <IntegerParameter Name="gain">0</IntegerParameter>
+                  </ParameterBlock>
+                </ParameterBlock>
+              </ParameterBlock>
+            </ParameterBlock>
+          </Component>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>

@@ -1,0 +1,38 @@
+  <ConfigurableDomain Name="Sst.MediaLoop1.Equalizer.fir" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/algo"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/equalizer/fir/algo">
+          <Component Name="algo">
+            <Component Name="switch">
+              <EnumParameter Name="value">off</EnumParameter>
+            </Component>
+            <Component Name="channel_conf">
+              <EnumParameter Name="value">stereo</EnumParameter>
+            </Component>
+            <ParameterBlock Name="channel">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="nbr_taps">64</IntegerParameter>
+                <IntegerParameter Name="input_gain">0</IntegerParameter>
+                <IntegerParameter Name="output_gain">0</IntegerParameter>
+                <IntegerParameter Name="coefficient">20100 -658 11187 3354 486 -589 -797 -263 -299 -319 -99 40 105 161 142 68 -14 -78 -80 -60 -31 4 38 35 4 -31 -46 -40 -8 28 62 80 73 47 11 -28 -55 -77 -83 -70 -47 -13 22 46 63 66 57 38 14 -8 -24 -34 -35 -36 -33 -23 -9 2 10 15 23 26 17 0</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </Component>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>

@@ -2,7 +2,7 @@
     "PrefixCommand" : "",
     "TestPlatformPort" : "5001",
 
-    "CriterionFile" : "../../AudioCriteria.txt",
+    "CriterionFile" : "../../../AudioCriteria.txt",
     "PfwConfFile" : "../../../AudioParameterFramework.xml",
 
     "ScenariosDirectory":"test-vectors",

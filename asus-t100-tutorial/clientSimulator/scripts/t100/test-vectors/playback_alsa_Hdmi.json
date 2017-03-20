@@ -1,0 +1,12 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedOutputDevices":"Hdmi"
+        }
+    },
+    {"enable":{}},
+    {"script":"playHdmi"},
+    {"unmute":{}}
+]

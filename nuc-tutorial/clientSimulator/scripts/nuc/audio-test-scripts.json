@@ -1,0 +1,18 @@
+{
+    "playHeadset":[
+        "../common/test-scripts/play.sh hw:0,0 noise.wav",
+        "asynchronous"
+        ],
+    "playHdmi":[
+        "../common/test-scripts/play.sh hw:0,3 noise.wav",
+        "asynchronous"
+        ],
+    "playRecordHdmi":[
+        "../common/test-scripts/play.sh hw:0,3 record.wav",
+        "asynchronous"
+        ],
+    "captureHeadset":[
+        "../common/test-scripts/capture.sh hw:0,0 record.wav",
+        "asynchronous"
+        ]
+}

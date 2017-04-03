@@ -1,0 +1,21 @@
+domainGroup: Routing.Hdmi
+
+	#########################################
+	############### Configure ###############
+	#########################################
+
+	domainGroup: Configure
+		RoutageState Includes Configure
+
+		domainGroup: Playack
+			domain: Port0
+				conf: Bind
+					ALL
+						OpenedPlaybackRoutes Includes Hdmi
+						ANY
+							SelectedOutputDevices Includes AuxDigital
+					/Audio/hdmi/output/port0/switch = 1
+
+				conf: Unbind
+					/Audio/hdmi/output/port0/switch = 0
+

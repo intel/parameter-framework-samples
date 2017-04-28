@@ -1,0 +1,17 @@
+{
+    "PrefixCommand" : "",
+    "TestPlatformPort" : "5001",
+
+    "CriterionFile" : "../../../AudioCriteria.txt",
+    "PfwConfFile" : "../../../AudioParameterFramework.xml",
+
+    "ScenariosDirectory":"test-vectors",
+    "ScriptsFile":"audio-test-scripts.json",
+    "ActionGathererFile":"../common/audio-test-actions.json",
+
+    "LogFile" : "Nuc.log",
+
+    "CoverageDir" : "../../../../parameter-framework/core/tools/coverage",
+    "CoverageFile" : "Nuc_Coverage.html",
+    "PfwDomainConfFile" : "AudioConfigurableDomains.xml"
+}

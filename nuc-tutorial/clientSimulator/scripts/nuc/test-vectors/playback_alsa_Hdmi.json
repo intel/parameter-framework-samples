@@ -1,0 +1,13 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedOutputDevices":"AuxDigital",
+         "OpenedPlaybackRoutes":"Hdmi"
+        }
+    },
+    {"enable":{}},
+    {"script":"playHdmi"},
+    {"unmute":{}}
+]

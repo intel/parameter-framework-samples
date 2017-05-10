@@ -60,12 +60,10 @@ test-platform ./AudioParameterFramework.xml
  # Create Criterion
 remote-process localhost 5001 createExclusiveSelectionCriterionFromStateList Mode Normal RingTone
 remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList RoutageState Configure Flow Path
-remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList ClosingCaptureRoutes DeepMedia HwCodec0IA Media
-remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList ClosingPlaybackRoutes DeepMedia HwCodec0IA Media
 remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList OpenedCaptureRoutes DeepMedia HwCodec0IA Media
 remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList OpenedPlaybackRoutes DeepMedia HwCodec0IA Media
 remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList SelectedInputDevices Back Headset Main
-remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList SelectedOutputDevices Headphones Headset Ihf
+remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList SelectedOutputDevices Headphones Headset Ihf Hdmi
 remote-process localhost 5001 createInclusiveSelectionCriterionFromStateList AudioSource Default Mic None
 remote-process localhost 5001 createExclusiveSelectionCriterionFromStateList ScreenState Off On
 
@@ -137,10 +135,8 @@ aplay -Dplughw:0,0 test.wav
 ```
 ExclusiveCriterion  Mode                   :  Normal      RingTone
 InclusiveCriterion  RoutageState           :  Configure   Flow          Path
-InclusiveCriterion  ClosingCaptureRoutes   :  DeepMedia   HwCodec0IA    Media
-InclusiveCriterion  ClosingPlaybackRoutes  :  DeepMedia   HwCodec0IA    Media
 InclusiveCriterion  OpenedCaptureRoutes    :  DeepMedia   HwCodec0IA    Media
-InclusiveCriterion  OpenedPlaybackRoutes   :  DeepMedia   HwCodec0IA    Media
+InclusiveCriterion  OpenedPlaybackRoutes   :  DeepMedia   HwCodec0IA    Media    Hdmi
 InclusiveCriterion  SelectedInputDevices   :  Back        Headset       Main
 InclusiveCriterion  SelectedOutputDevices  :  Headphones  Headset       Ihf
 InclusiveCriterion  AudioSource            :  Default     Mic           None

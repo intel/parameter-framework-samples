@@ -1,0 +1,84 @@
+  <ConfigurableDomain Name="OutputDevice.Sst.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Ihf">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Is" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Excludes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level"/>
+      <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Ihf">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_regular/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm_deep/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/pcm0_in/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/codec_out/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/gain/level">
+          <IntegerParameter Name="level">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>

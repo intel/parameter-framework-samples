@@ -387,15 +387,121 @@
   </ConfigurableDomain>
   <ConfigurableDomain Name="Sst.MediaLoop1.Mdrc" SequenceAware="false">
     <Configurations>
-      <Configuration Name="Default">
-        <CompoundRule Type="All"/>
+      <Configuration Name="Deep">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="other">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Excludes" Value="DeepMedia"/>
+        </CompoundRule>
       </Configuration>
     </Configurations>
     <ConfigurableElements>
       <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/algo"/>
     </ConfigurableElements>
     <Settings>
-      <Configuration Name="Default">
+      <Configuration Name="Deep">
+        <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/algo">
+          <ParameterBlock Name="algo">
+            <ParameterBlock Name="switch">
+              <EnumParameter Name="value">on</EnumParameter>
+            </ParameterBlock>
+            <IntegerParameter Name="power_threshold">0</IntegerParameter>
+            <EnumParameter Name="mode">simple</EnumParameter>
+            <IntegerParameter Name="nbr_bands">2</IntegerParameter>
+            <EnumParameter Name="filter_conf">parallel_arch_5th</EnumParameter>
+            <ParameterBlock Name="band">
+              <ParameterBlock Name="0">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8994934558868408203125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8954265117645263671875</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.9603793621063232421875</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">-1.9561820030212402343750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.9366021156311035156250</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">0.0000000000000000000000</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">8960</IntegerParameter>
+                <IntegerParameter Name="level_u">5120</IntegerParameter>
+                <IntegerParameter Name="gain_b">2304</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">0</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="1">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">complementary</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.9255115985870361328125</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.9194989204406738281250</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5387456417083740234375</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2170753479003906250000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.4452285766601562500000</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.4396698474884033203125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6656</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2816</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">25</IntegerParameter>
+                <IntegerParameter Name="loudness_release">25</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="2">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.8588137626647949218750</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.8353552818298339843750</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5445747375488281250000</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2181944847106933593750</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.3989596366882324218750</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.3747951984405517578125</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">5120</IntegerParameter>
+                <IntegerParameter Name="level_u">2560</IntegerParameter>
+                <IntegerParameter Name="gain_b">1536</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">51</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">20</IntegerParameter>
+                <IntegerParameter Name="loudness_release">20</IntegerParameter>
+                <IntegerParameter Name="gain_attack">256</IntegerParameter>
+                <IntegerParameter Name="gain_release">256</IntegerParameter>
+              </ParameterBlock>
+              <ParameterBlock Name="3">
+                <IntegerParameter Name="reserved1">0</IntegerParameter>
+                <EnumParameter Name="filter_type">peaking</EnumParameter>
+                <FixedPointParameter Name="a1_1">0.7010886669158935546875</FixedPointParameter>
+                <FixedPointParameter Name="a1_2">-1.5644578933715820312500</FixedPointParameter>
+                <FixedPointParameter Name="a2_1">0.5643525123596191406250</FixedPointParameter>
+                <FixedPointParameter Name="a2_2">1.2245235443115234375000</FixedPointParameter>
+                <FixedPointParameter Name="a3_1">-0.2679491043090820312500</FixedPointParameter>
+                <FixedPointParameter Name="a3_2">-0.1911036968231201171875</FixedPointParameter>
+                <IntegerParameter Name="level_a">19200</IntegerParameter>
+                <IntegerParameter Name="level_b">6400</IntegerParameter>
+                <IntegerParameter Name="level_u">3072</IntegerParameter>
+                <IntegerParameter Name="gain_b">2560</IntegerParameter>
+                <IntegerParameter Name="slope_lower_most">640</IntegerParameter>
+                <IntegerParameter Name="slope_ab">256</IntegerParameter>
+                <IntegerParameter Name="slope_upper_most">13</IntegerParameter>
+                <IntegerParameter Name="loudness_attack">50</IntegerParameter>
+                <IntegerParameter Name="loudness_release">50</IntegerParameter>
+                <IntegerParameter Name="gain_attack">3</IntegerParameter>
+                <IntegerParameter Name="gain_release">3</IntegerParameter>
+              </ParameterBlock>
+            </ParameterBlock>
+          </ParameterBlock>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="other">
         <ConfigurableElement Path="/Audio/sst/pipe/media_loop1/mdrc/algo">
           <ParameterBlock Name="algo">
             <ParameterBlock Name="switch">

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
+  <ConfigurableDomain Name="OutputDevice.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Ihf">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Is" Value="Ihf"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Excludes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Ihf"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level"/>
+      <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Ihf">
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">165 165</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">130 130</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">130 130</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Multimedia.Ihf.Headset">
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/speaker/boost">
+          <EnumParameter Name="boost">g-2x</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/dac1">
+          <IntegerParameter Name="dac1">132 132</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/0/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/headphone/analog/volume/1/level">
+          <IntegerParameter Name="level">31</IntegerParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/codec/rt5640/output/digital/volume/mono_dac">
+          <IntegerParameter Name="mono_dac">175 175</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="InputDevice.Selected" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Multimedia.Headset">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Multimedia.Headset">
+        <ConfigurableElement Path="/Audio/codec/rt5640/input/analog/2/boost_gain">
+          <IntegerParameter Name="boost_gain">1</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+
+</ConfigurableDomains>

@@ -1,14 +1,18 @@
 {
     "play":[
-        "../common/test-scripts/play.sh hw:0,0 noise.wav",
+        "../common/test-scripts/play.sh hw:bytcrrt5640,0 noise.wav",
         "asynchronous"
         ],
     "playDeep":[
-        "../common/test-scripts/play.sh hw:0,1 noise.wav",
+        "../common/test-scripts/play.sh hw:bytcrrt5640,1 noise.wav",
+        "asynchronous"
+        ],
+    "playHdmi":[
+        "../common/test-scripts/play.sh hw:Audio,0 noise.wav",
         "asynchronous"
         ],
     "capture":[
-        "../common/test-scripts/capture.sh hw:0,0 record.wav",
+        "../common/test-scripts/capture.sh hw:bytcrrt5640,0 record.wav",
         "asynchronous"
         ]
 }

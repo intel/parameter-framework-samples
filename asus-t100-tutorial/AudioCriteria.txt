@@ -1,10 +1,8 @@
 ExclusiveCriterion  Mode                   :  Normal      RingTone
 InclusiveCriterion  RoutageState           :  Configure   Flow          Path
-InclusiveCriterion  ClosingCaptureRoutes   :  DeepMedia   HwCodec0IA    Media
-InclusiveCriterion  ClosingPlaybackRoutes  :  DeepMedia   HwCodec0IA    Media 
 InclusiveCriterion  OpenedCaptureRoutes    :  DeepMedia   HwCodec0IA    Media
 InclusiveCriterion  OpenedPlaybackRoutes   :  DeepMedia   HwCodec0IA    Media
 InclusiveCriterion  SelectedInputDevices   :  Back        Headset       Main
-InclusiveCriterion  SelectedOutputDevices  :  Headphones  Headset       Ihf 
+InclusiveCriterion  SelectedOutputDevices  :  Headphones  Headset       Ihf       Hdmi
 InclusiveCriterion  AudioSource            :  Default     Mic           None
 ExclusiveCriterion  ScreenState            :  Off         On

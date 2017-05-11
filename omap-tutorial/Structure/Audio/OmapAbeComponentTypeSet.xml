@@ -83,14 +83,14 @@
         <Component Name="dmic2" Type="Volume2" Mapping="Amend1:DMIC2,Amend2:UL"/>
         <Component Name="dmic3" Type="Volume2" Mapping="Amend1:DMIC3,Amend2:UL"/>
         <Component Name="bt_ul" Type="Volume2" Mapping="Amend1:BT,Amend2:UL"/>
-        <Component Name="ul_ch0" Type="Source" Mapping="Amend1:MUX_UL10"/>
-        <Component Name="ul_ch1" Type="Source" Mapping="Amend1:MUX_UL11"/>
-        <Component Name="ul_ch2" Type="Source" Mapping="Amend1:MUX_UL00"/>
-        <Component Name="ul_ch3" Type="Source" Mapping="Amend1:MUX_UL01"/>
-        <Component Name="ul_ch4" Type="Source" Mapping="Amend1:MUX_UL02"/>
-        <Component Name="ul_ch5" Type="Source" Mapping="Amend1:MUX_UL03"/>
-        <Component Name="ul2_left" Type="Source" Mapping="Amend1:MUX_UL04"/>
-        <Component Name="ul2_right" Type="Source" Mapping="Amend1:MUX_UL05"/>
+        <Component Name="ul_ch0" Type="Source" Mapping="Amend1:MUX_UL00"/>
+        <Component Name="ul_ch1" Type="Source" Mapping="Amend1:MUX_UL01"/>
+        <Component Name="ul_ch2" Type="Source" Mapping="Amend1:MUX_UL01"/>
+        <Component Name="ul_ch3" Type="Source" Mapping="Amend1:MUX_UL02"/>
+        <Component Name="ul_ch4" Type="Source" Mapping="Amend1:MUX_UL03"/>
+        <Component Name="ul_ch5" Type="Source" Mapping="Amend1:MUX_UL04"/>
+        <Component Name="ul2_left" Type="Source" Mapping="Amend1:MUX_UL10"/>
+        <Component Name="ul2_right" Type="Source" Mapping="Amend1:MUX_UL11"/>
         <Component Name="vx_ch0" Type="Source" Mapping="Amend1:MUX_VX0"/>
         <Component Name="vx_ch1" Type="Source" Mapping="Amend1:MUX_VX1"/>
         <Component Name="voice" Type="InputMixer" Mapping="Amend1:Capture,Amend2:AUDUL"/>

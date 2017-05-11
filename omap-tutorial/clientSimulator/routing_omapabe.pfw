@@ -1,0 +1,126 @@
+
+supDomain: Audio.omapabe
+	supDomain: Volume
+
+		supDomain: Playback
+			supDomain: External
+				domain: Headset
+					conf: Normal
+						SelectedOutputDevices Includes Headset
+						/Audio/omapabe/abe/output/headset/sdt_dl_volume/volume = 120
+					conf: Default
+						/Audio/omapabe/abe/output/headset/sdt_dl_volume/volume = 0
+		supDomain: MediaPlayback
+			supDomain: External
+				domain: Headset
+					conf: Normal
+						ALL
+							SelectedOutputDevices Includes Headset
+							ANY
+								OpenedPlaybackRoutes Includes Media
+								OpenedPlaybackRoutes Includes DeepMedia
+						/Audio/omapabe/abe/output/headset/dl1/media_playback = 120
+					conf: Default
+						/Audio/omapabe/abe/output/headset/dl1/media_playback = 0
+		supDomain: VoicePlayback
+			supDomain: External
+				domain: Headset
+					conf: Normal
+						ALL
+							SelectedOutputDevices Includes Headset
+							OpenedPlaybackRoutes Includes Voice
+						/Audio/omapabe/abe/output/headset/dl1/voice_playback = 120
+					conf: Default
+						/Audio/omapabe/abe/output/headset/dl1/voice_playback = 0
+		supDomain: TonesPlayback
+			supDomain: External
+				domain: Headset
+					conf: Normal
+						ALL
+							SelectedOutputDevices Includes Headset
+							OpenedPlaybackRoutes Includes Tones
+						/Audio/omapabe/abe/output/headset/dl1/tones_playback = 120
+					conf: Default
+						/Audio/omapabe/abe/output/headset/dl1/tones_playback = 0
+		supDomain: Capture
+			supDomain: External
+				domain: Headset
+					conf: Default
+						SelectedInputDevices Includes Headset
+						/Audio/omapabe/abe/input/amic/volume = 120 120
+					conf: Mute
+						/Audio/omapabe/abe/input/amic/volume = 0 0
+
+supDomain: Routing
+	supDomain: Enable
+		RoutageState Includes Path
+
+		supDomain: omapabe
+			supDomain: Playback
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							SelectedOutputDevices Includes Headset
+							/Audio/omapabe/abe/output/headset/sdt_dl = 1
+
+						conf: Disable
+							/Audio/omapabe/abe/output/headset/sdt_dl = 0
+			supDomain: MediaPlayback
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ALL
+								SelectedOutputDevices Includes Headset
+								ANY
+									OpenedPlaybackRoutes Includes Media
+									OpenedPlaybackRoutes Includes DeepMedia
+							/Audio/omapabe/abe/output/headset/dl1/mixer_media = 1
+
+						conf: Disable
+							/Audio/omapabe/abe/output/headset/dl1/mixer_media = 0
+			supDomain: VoicePlayback
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ALL
+								SelectedOutputDevices Includes Headset
+								OpenedPlaybackRoutes Includes Voice
+							/Audio/omapabe/abe/output/headset/dl1/mixer_voice = 1
+
+						conf: Disable
+							/Audio/omapabe/abe/output/headset/dl1/mixer_voice = 0
+			supDomain: TonesPlayback
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ALL
+								SelectedOutputDevices Includes Headset
+								OpenedPlaybackRoutes Includes Tones
+							/Audio/omapabe/abe/output/headset/dl1/mixer_tones = 1
+
+						conf: Disable
+							/Audio/omapabe/abe/output/headset/dl1/mixer_tones = 0
+
+			supDomain: MediaCapture
+				supDomain: External
+					domain: Headset
+						conf: Enable
+							ALL
+								SelectedInputDevices Includes Headset
+								OpenedCaptureRoutes Includes Media
+							/Audio/omapabe/abe/input/ul2_left/route = amic_left
+							/Audio/omapabe/abe/input/ul2_right/route = amic_right
+
+						conf: Disable
+							/Audio/omapabe/abe/input/ul2_left/route = none
+							/Audio/omapabe/abe/input/ul2_right/route = none
+
+
+	supDomain: Configure
+		RoutageState Includes Configure
+
+		supDomain: omapabe
+			domain: Calibration.HWCodec
+				conf: All
+					/Audio/omapabe/abe/output/pdm = 1
+

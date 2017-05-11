@@ -1,0 +1,13 @@
+[
+    {"mute":{}},
+    {"disable":{}},
+    {"configure":
+        {"Mode":"Normal",
+         "SelectedOutputDevices":"Headset",
+         "OpenedPlaybackRoutes":"Voice"
+        }
+    },
+    {"enable":{}},
+    {"script":"playVoice"},
+    {"unmute":{}}
+]

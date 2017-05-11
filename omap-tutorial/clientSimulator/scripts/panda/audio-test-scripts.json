@@ -1,0 +1,22 @@
+{
+    "play":[
+        "../common/test-scripts/play.sh hw:0,0 /home/ubuntu/patterns/wav/beethoven_48000.wav",
+        "asynchronous"
+        ],
+    "playVoice":[
+        "../common/test-scripts/play.sh hw:0,2 /home/ubuntu/patterns/wav/beethoven_16000.wav",
+        "asynchronous"
+        ],
+    "playTones":[
+        "../common/test-scripts/play.sh hw:0,3 /home/ubuntu/patterns/wav/beethoven_48000.wav",
+        "asynchronous"
+        ],
+    "playDeep":[
+        "../common/test-scripts/play.sh hw:0,5 /home/ubuntu/patterns/wav/beethoven_48000.wav",
+        "asynchronous"
+        ],
+    "capture":[
+        "../common/test-scripts/capture.sh hw:0,1 /home/ubuntu/patterns/test_cap_alsa.wav",
+        "asynchronous"
+        ]
+}

@@ -1,0 +1,11 @@
+ExclusiveCriterion  Mode                   :  InCsvCall         InVoipCall       Normal
+InclusiveCriterion  RoutageState           :  Configure         Flow             Path
+InclusiveCriterion  ClosingCaptureRoutes   :  Media     Modem     Voice     MultiChannel
+InclusiveCriterion  ClosingPlaybackRoutes  :  Media     Modem     Voice     Tones        DeepMedia
+InclusiveCriterion  OpenedCaptureRoutes    :  Media     Modem     Voice     MultiChannel
+InclusiveCriterion  OpenedPlaybackRoutes   :  Media     Modem     Voice     Tones        DeepMedia
+InclusiveCriterion  SelectedInputDevices   :  SubMic             Headset    MainMic    DMIC
+InclusiveCriterion  SelectedOutputDevices  :  Earpiece   Headset        Headphones    IHF
+InclusiveCriterion  AudioSource            :  Default          Mic              None              VoiceCall  VoiceCommunication  VoiceDownlink  VoiceUplink
+ExclusiveCriterion  BandType               :  NB                SuperWB          Unknown          WB
+ExclusiveCriterion  ScreenState            :  Off               On

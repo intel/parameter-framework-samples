@@ -1,0 +1,17 @@
+{
+    "PrefixCommand" : "",
+    "TestPlatformPort" : "5001",
+
+    "CriterionFile" : "/home/ubuntu/intel/parameter-framework-samples/omap-tutorial/clientSimulator/AudioCriteria.txt",
+    "PfwConfFile" : "/home/ubuntu/intel/parameter-framework-samples/omap-tutorial/PandaBoardES.xml",
+
+    "ScenariosDirectory":"test-vectors",
+    "ScriptsFile":"audio-test-scripts.json",
+    "ActionGathererFile":"../common/audio-test-actions.json",
+
+    "LogFile" : "PandaBoard.log",
+
+    "CoverageDir" : "/home/ubuntu/intel/parameter-framework/core/tools/coverage",
+    "CoverageFile" : "PandaBoard_Coverage.html",
+    "PfwDomainConfFile" : "AudioConfigurableDomains.xml"
+}

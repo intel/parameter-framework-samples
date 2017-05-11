@@ -1,9 +1,465 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConfigurableDomains xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Schemas/ConfigurableDomains.xsd" SystemClassName="Audio">
-    <ConfigurableDomain Name="Omap">
-        <Configurations>
-            <Configuration Name="Omap"></Configuration>
-        </Configurations>
-        <ConfigurableElements></ConfigurableElements>
-    </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.omapabe.Volume.Playback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Normal">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl_volume/volume"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Normal">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl_volume/volume">
+          <IntegerParameter Name="volume">120</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl_volume/volume">
+          <IntegerParameter Name="volume">0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.omapabe.Volume.MediaPlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Normal">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/media_playback"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Normal">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/media_playback">
+          <IntegerParameter Name="media_playback">120</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/media_playback">
+          <IntegerParameter Name="media_playback">0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.omapabe.Volume.VoicePlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Normal">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Voice"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/voice_playback"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Normal">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/voice_playback">
+          <IntegerParameter Name="voice_playback">120</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/voice_playback">
+          <IntegerParameter Name="voice_playback">0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.omapabe.Volume.TonesPlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Normal">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+          <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Tones"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/tones_playback"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Normal">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/tones_playback">
+          <IntegerParameter Name="tones_playback">120</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/tones_playback">
+          <IntegerParameter Name="tones_playback">0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.omapabe.Volume.Capture.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Mute">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/input/amic/volume"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/amic/volume">
+          <IntegerParameter Name="volume">120 120</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Mute">
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/amic/volume">
+          <IntegerParameter Name="volume">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.omapabe.Playback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl">
+          <BooleanParameter Name="sdt_dl">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/sdt_dl">
+          <BooleanParameter Name="sdt_dl">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.omapabe.MediaPlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <CompoundRule Type="Any">
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Media"/>
+              <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="DeepMedia"/>
+            </CompoundRule>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_media"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_media">
+          <BooleanParameter Name="mixer_media">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_media">
+          <BooleanParameter Name="mixer_media">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.omapabe.VoicePlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Voice"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_voice"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_voice">
+          <BooleanParameter Name="mixer_voice">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_voice">
+          <BooleanParameter Name="mixer_voice">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.omapabe.TonesPlayback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedPlaybackRoutes" MatchesWhen="Includes" Value="Tones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_tones"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_tones">
+          <BooleanParameter Name="mixer_tones">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/headset/dl1/mixer_tones">
+          <BooleanParameter Name="mixer_tones">0</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.omapabe.MediaCapture.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="All">
+            <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="OpenedCaptureRoutes" MatchesWhen="Includes" Value="Media"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_left/route"/>
+      <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_right/route"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_left/route">
+          <EnumParameter Name="route">amic_left</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_right/route">
+          <EnumParameter Name="route">amic_right</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_left/route">
+          <EnumParameter Name="route">none</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/abe/input/ul2_right/route">
+          <EnumParameter Name="route">none</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.omapabe.Calibration.HWCodec" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="All">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/abe/output/pdm"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="All">
+        <ConfigurableElement Path="/Audio/omapabe/abe/output/pdm">
+          <BooleanParameter Name="pdm">1</BooleanParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Audio.twl6040.Volume.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Normal">
+        <CompoundRule Type="Any">
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+          <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Default">
+        <CompoundRule Type="All"/>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/volume"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Normal">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/volume">
+          <IntegerParameter Name="volume">12 12</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/volume">
+          <IntegerParameter Name="volume">0 0</IntegerParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.twl6040.Playback.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headset"/>
+            <SelectionCriterionRule SelectionCriterion="SelectedOutputDevices" MatchesWhen="Includes" Value="Headphones"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/right"/>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/left"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/right">
+          <EnumParameter Name="right">hs_dac</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/left">
+          <EnumParameter Name="left">hs_dac</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/right">
+          <EnumParameter Name="right">off</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/headset/enable/left">
+          <EnumParameter Name="left">off</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Enable.twl6040.Capture.External.Headset" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Enable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+          <CompoundRule Type="Any">
+            <SelectionCriterionRule SelectionCriterion="SelectedInputDevices" MatchesWhen="Includes" Value="Headset"/>
+          </CompoundRule>
+        </CompoundRule>
+      </Configuration>
+      <Configuration Name="Disable">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Path"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/input/right/mux"/>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/input/left/mux"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Enable">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/input/right/mux">
+          <EnumParameter Name="mux">headset_mic</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/input/left/mux">
+          <EnumParameter Name="mux">headset_mic</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+      <Configuration Name="Disable">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/input/right/mux">
+          <EnumParameter Name="mux">off</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/input/left/mux">
+          <EnumParameter Name="mux">off</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
+  <ConfigurableDomain Name="Routing.Configure.twl6040.Calibration.HWCodec" SequenceAware="false">
+    <Configurations>
+      <Configuration Name="Default">
+        <CompoundRule Type="All">
+          <SelectionCriterionRule SelectionCriterion="RoutageState" MatchesWhen="Includes" Value="Configure"/>
+        </CompoundRule>
+      </Configuration>
+    </Configurations>
+    <ConfigurableElements>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/output/hs_power_mode/value"/>
+      <ConfigurableElement Path="/Audio/omapabe/twl6040/power_mode/value"/>
+    </ConfigurableElements>
+    <Settings>
+      <Configuration Name="Default">
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/output/hs_power_mode/value">
+          <EnumParameter Name="value">high-performance</EnumParameter>
+        </ConfigurableElement>
+        <ConfigurableElement Path="/Audio/omapabe/twl6040/power_mode/value">
+          <EnumParameter Name="value">high-performance</EnumParameter>
+        </ConfigurableElement>
+      </Configuration>
+    </Settings>
+  </ConfigurableDomain>
 </ConfigurableDomains>
